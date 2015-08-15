@@ -1,0 +1,1525 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'logtron',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.25
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'logtron', null ]
+6 verbose cache add name=undefined spec="logtron" args=["logtron",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'logtron',
+7 verbose parsed url   path: 'logtron',
+7 verbose parsed url   href: 'logtron' }
+8 silly lockFile 51d02a46-logtron logtron
+9 verbose lock logtron /home/soumik/.npm/51d02a46-logtron.lock
+10 silly lockFile 51d02a46-logtron logtron
+11 silly lockFile 51d02a46-logtron logtron
+12 verbose addNamed [ 'logtron', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile e07118da-logtron logtron@
+15 verbose lock logtron@ /home/soumik/.npm/e07118da-logtron.lock
+16 silly addNameRange { name: 'logtron', range: '*', hasData: false }
+17 verbose request where is /logtron
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 081a09adc45f3ae8
+20 verbose url raw /logtron
+21 verbose url resolving [ 'https://registry.npmjs.org/', './logtron' ]
+22 verbose url resolved https://registry.npmjs.org/logtron
+23 verbose request where is https://registry.npmjs.org/logtron
+24 info trying registry request attempt 1 at 01:10:58
+25 verbose etag "1C24MMB27V4JN4LB6EQZSEG29"
+26 http GET https://registry.npmjs.org/logtron
+27 http 304 https://registry.npmjs.org/logtron
+28 silly registry.get cb [ 304,
+28 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     etag: '"1C24MMB27V4JN4LB6EQZSEG29"',
+28 silly registry.get     age: '41',
+28 silly registry.get     connection: 'keep-alive',
+28 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+28 silly registry.get     'x-cache': 'HIT',
+28 silly registry.get     'x-cache-hits': '1',
+28 silly registry.get     'x-timer': 'S1436816458.361910,VS0,VE0',
+28 silly registry.get     vary: 'Accept' } ]
+29 verbose etag https://registry.npmjs.org/logtron from cache
+30 silly addNameRange number 2 { name: 'logtron', range: '*', hasData: true }
+31 silly addNameRange versions [ 'logtron',
+31 silly addNameRange   [ '5.0.4',
+31 silly addNameRange     '5.1.0',
+31 silly addNameRange     '5.2.0',
+31 silly addNameRange     '5.2.0-yosemite',
+31 silly addNameRange     '5.2.1',
+31 silly addNameRange     '6.0.0',
+31 silly addNameRange     '6.1.0',
+31 silly addNameRange     '6.1.1',
+31 silly addNameRange     '7.0.0',
+31 silly addNameRange     '7.0.0-node0.12',
+31 silly addNameRange     '7.1.0',
+31 silly addNameRange     '7.2.0',
+31 silly addNameRange     '8.0.0',
+31 silly addNameRange     '8.0.2',
+31 silly addNameRange     '8.1.0',
+31 silly addNameRange     '8.1.1',
+31 silly addNameRange     '8.2.0',
+31 silly addNameRange     '8.3.0',
+31 silly addNameRange     '8.3.1',
+31 silly addNameRange     '8.3.2',
+31 silly addNameRange     '8.3.4',
+31 silly addNameRange     '8.4.0',
+31 silly addNameRange     '8.5.0' ] ]
+32 verbose addNamed [ 'logtron', '8.5.0' ]
+33 verbose addNamed [ '8.5.0', '8.5.0' ]
+34 silly lockFile 212d1e43-logtron-8-5-0 logtron@8.5.0
+35 verbose lock logtron@8.5.0 /home/soumik/.npm/212d1e43-logtron-8-5-0.lock
+36 silly lockFile 212d1e43-logtron-8-5-0 logtron@8.5.0
+37 silly lockFile 212d1e43-logtron-8-5-0 logtron@8.5.0
+38 silly lockFile e07118da-logtron logtron@
+39 silly lockFile e07118da-logtron logtron@
+40 silly resolved [ { name: 'logtron',
+40 silly resolved     version: '8.5.0',
+40 silly resolved     description: 'A logging MACHINE',
+40 silly resolved     keywords: [],
+40 silly resolved     author: { name: 'Raynos', email: 'raynos2@gmail' },
+40 silly resolved     repository: { type: 'git', url: 'git://github.com/uber/logtron.git' },
+40 silly resolved     main: 'index.js',
+40 silly resolved     homepage: 'https://github.com/uber/logtron',
+40 silly resolved     bugs:
+40 silly resolved      { url: 'https://github.com/uber/logtron/issues',
+40 silly resolved        email: 'raynos2@gmail.com' },
+40 silly resolved     dependencies:
+40 silly resolved      { airlock: '^2.1.1',
+40 silly resolved        'core-util-is': '^1.0.1',
+40 silly resolved        'deep-extend': '0.4.0',
+40 silly resolved        error: '^7.0.1',
+40 silly resolved        inherits: '^2.0.1',
+40 silly resolved        'kafka-logger': '^5.0.1',
+40 silly resolved        'lodash.isfinite': '~2.4.1',
+40 silly resolved        mkdirp: '~0.3.5',
+40 silly resolved        nodemailer: '~0.5.14',
+40 silly resolved        'readable-stream': '^1.0.27-1',
+40 silly resolved        'sentry-logger': '^3.0.3',
+40 silly resolved        'uber-raven': '^0.6.3-project-name',
+40 silly resolved        'winston-uber': '^1.0.0',
+40 silly resolved        xtend: '^4.0.0' },
+40 silly resolved     devDependencies:
+40 silly resolved      { body: '~4.4.2',
+40 silly resolved        'date-format': '0.0.2',
+40 silly resolved        istanbul: '~0.1.46',
+40 silly resolved        itape: '^1.5.0',
+40 silly resolved        jscs: '^1.7.3',
+40 silly resolved        jshint: '^2.5.2',
+40 silly resolved        opn: '^0.1.2',
+40 silly resolved        'pre-commit': '0.0.4',
+40 silly resolved        rimraf: '^2.2.8',
+40 silly resolved        'tap-spec': '^0.1.9',
+40 silly resolved        tape: '^3.5.0',
+40 silly resolved        uuid: '~1.4.1' },
+40 silly resolved     scripts:
+40 silly resolved      { test: 'npm run jshint -s && NODE_ENV=test node test/index.js | tap-spec',
+40 silly resolved        'fast-test': 'NODE_ENV=test node test/index.js | tap-spec',
+40 silly resolved        jshint: 'jshint --verbose .',
+40 silly resolved        'jshint-pre-commit': 'jshint --verbose $(git diff --cached --name-only | grep \'\\.js$\')',
+40 silly resolved        cover: 'istanbul cover --report html --print detail test/index.js',
+40 silly resolved        'view-cover': 'istanbul report html && opn ./coverage/index.html' },
+40 silly resolved     engines: { node: '>= 0.8.x' },
+40 silly resolved     'pre-commit': [ 'jshint-pre-commit', 'fast-test' ],
+40 silly resolved     gitHead: 'e7387d106ea7429cb239b930878d319504fc914f',
+40 silly resolved     _id: 'logtron@8.5.0',
+40 silly resolved     _shasum: 'cb5c21a61ea8c79bab40e97eea3bc10dd649ce25',
+40 silly resolved     _from: 'logtron@',
+40 silly resolved     _npmVersion: '2.8.2',
+40 silly resolved     _nodeVersion: '0.10.32',
+40 silly resolved     _npmUser: { name: 'sh1mmer', email: 'tom.croucher@gmail.com' },
+40 silly resolved     dist:
+40 silly resolved      { shasum: 'cb5c21a61ea8c79bab40e97eea3bc10dd649ce25',
+40 silly resolved        tarball: 'http://registry.npmjs.org/logtron/-/logtron-8.5.0.tgz' },
+40 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+40 silly resolved     directories: {},
+40 silly resolved     _resolved: 'https://registry.npmjs.org/logtron/-/logtron-8.5.0.tgz',
+40 silly resolved     readme: 'ERROR: No README data found!' } ]
+41 info install logtron@8.5.0 into /home/soumik/Projects/nodejs/cloud_tripper1
+42 info installOne logtron@8.5.0
+43 verbose node_modules/logtron unbuild
+44 verbose tar unpack /home/soumik/.npm/logtron/8.5.0/package.tgz
+45 silly lockFile bfa7423b-ud-tripper1-node-modules-logtron tar:///home/soumik/Projects/nodejs/cloud_tripper1/node_modules/logtron
+46 verbose lock tar:///home/soumik/Projects/nodejs/cloud_tripper1/node_modules/logtron /home/soumik/.npm/bfa7423b-ud-tripper1-node-modules-logtron.lock
+47 silly lockFile cc2bb9e2-ik-npm-logtron-8-5-0-package-tgz tar:///home/soumik/.npm/logtron/8.5.0/package.tgz
+48 verbose lock tar:///home/soumik/.npm/logtron/8.5.0/package.tgz /home/soumik/.npm/cc2bb9e2-ik-npm-logtron-8-5-0-package-tgz.lock
+49 silly gunzTarPerm modes [ '775', '664' ]
+50 silly gunzTarPerm extractEntry package.json
+51 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+52 silly gunzTarPerm extractEntry .npmignore
+53 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+54 silly gunzTarPerm extractEntry README.md
+55 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+56 silly gunzTarPerm extractEntry LICENSE
+57 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+58 silly gunzTarPerm extractEntry child-logger.js
+59 silly gunzTarPerm modified mode [ 'child-logger.js', 420, 436 ]
+60 silly gunzTarPerm extractEntry default-levels.js
+61 silly gunzTarPerm modified mode [ 'default-levels.js', 420, 436 ]
+62 silly gunzTarPerm extractEntry errors.js
+63 silly gunzTarPerm modified mode [ 'errors.js', 420, 436 ]
+64 silly gunzTarPerm extractEntry index.js
+65 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+66 silly gunzTarPerm extractEntry log-method.js
+67 silly gunzTarPerm modified mode [ 'log-method.js', 420, 436 ]
+68 silly gunzTarPerm extractEntry logger.js
+69 silly gunzTarPerm modified mode [ 'logger.js', 420, 436 ]
+70 silly gunzTarPerm extractEntry entry.js
+71 silly gunzTarPerm modified mode [ 'entry.js', 420, 436 ]
+72 silly gunzTarPerm extractEntry docs.mli
+73 silly gunzTarPerm modified mode [ 'docs.mli', 420, 436 ]
+74 silly gunzTarPerm extractEntry .jshintignore
+75 silly gunzTarPerm modified mode [ '.jshintignore', 420, 436 ]
+76 silly gunzTarPerm extractEntry backends/console.js
+77 silly gunzTarPerm modified mode [ 'backends/console.js', 420, 436 ]
+78 silly gunzTarPerm extractEntry backends/disk.js
+79 silly gunzTarPerm modified mode [ 'backends/disk.js', 420, 436 ]
+80 silly gunzTarPerm extractEntry backends/file.js
+81 silly gunzTarPerm modified mode [ 'backends/file.js', 420, 436 ]
+82 silly gunzTarPerm extractEntry backends/kafka.js
+83 silly gunzTarPerm modified mode [ 'backends/kafka.js', 420, 436 ]
+84 silly gunzTarPerm extractEntry backends/logger-stream.js
+85 silly gunzTarPerm modified mode [ 'backends/logger-stream.js', 420, 436 ]
+86 silly gunzTarPerm extractEntry backends/sentry.js
+87 silly gunzTarPerm modified mode [ 'backends/sentry.js', 420, 436 ]
+88 silly gunzTarPerm extractEntry .jshintrc
+89 silly gunzTarPerm modified mode [ '.jshintrc', 420, 436 ]
+90 silly gunzTarPerm extractEntry lib/async-console-transport.js
+91 silly gunzTarPerm modified mode [ 'lib/async-console-transport.js', 420, 436 ]
+92 silly gunzTarPerm extractEntry lib/mkdir-daily-rotate-file.js
+93 silly gunzTarPerm modified mode [ 'lib/mkdir-daily-rotate-file.js', 420, 436 ]
+94 silly gunzTarPerm extractEntry lib/mkdir-file.js
+95 silly gunzTarPerm modified mode [ 'lib/mkdir-file.js', 420, 436 ]
+96 silly gunzTarPerm extractEntry lib/parallel-write.js
+97 silly gunzTarPerm modified mode [ 'lib/parallel-write.js', 420, 436 ]
+98 silly gunzTarPerm extractEntry .travis.yml
+99 silly gunzTarPerm modified mode [ '.travis.yml', 420, 436 ]
+100 silly gunzTarPerm extractEntry test/access.js
+101 silly gunzTarPerm modified mode [ 'test/access.js', 420, 436 ]
+102 silly gunzTarPerm extractEntry test/errors-in-backend.js
+103 silly gunzTarPerm modified mode [ 'test/errors-in-backend.js', 420, 436 ]
+104 silly gunzTarPerm extractEntry test/errors-with-all-backends.js
+105 silly gunzTarPerm modified mode [ 'test/errors-with-all-backends.js', 420, 436 ]
+106 silly gunzTarPerm extractEntry test/file-errors.js
+107 silly gunzTarPerm modified mode [ 'test/file-errors.js', 420, 436 ]
+108 silly gunzTarPerm extractEntry test/file.js
+109 silly gunzTarPerm modified mode [ 'test/file.js', 420, 436 ]
+110 silly gunzTarPerm extractEntry test/default-backends.js
+111 silly gunzTarPerm modified mode [ 'test/default-backends.js', 420, 436 ]
+112 silly gunzTarPerm extractEntry test/backend-without-destroy.js
+113 silly gunzTarPerm modified mode [ 'test/backend-without-destroy.js', 420, 436 ]
+114 silly gunzTarPerm extractEntry test/kafka-errors.js
+115 silly gunzTarPerm modified mode [ 'test/kafka-errors.js', 420, 436 ]
+116 silly gunzTarPerm extractEntry test/kafka-is-disabled.js
+117 silly gunzTarPerm modified mode [ 'test/kafka-is-disabled.js', 420, 436 ]
+118 silly gunzTarPerm extractEntry test/kafka.js
+119 silly gunzTarPerm modified mode [ 'test/kafka.js', 420, 436 ]
+120 silly gunzTarPerm extractEntry test/leaky-backend-master.js
+121 silly gunzTarPerm modified mode [ 'test/leaky-backend-master.js', 420, 436 ]
+122 silly gunzTarPerm extractEntry test/console.js
+123 silly gunzTarPerm modified mode [ 'test/console.js', 420, 436 ]
+124 silly gunzTarPerm extractEntry test/leaky-backend.js
+125 silly gunzTarPerm modified mode [ 'test/leaky-backend.js', 420, 436 ]
+126 silly gunzTarPerm extractEntry test/console-errors.js
+127 silly gunzTarPerm modified mode [ 'test/console-errors.js', 420, 436 ]
+128 silly gunzTarPerm extractEntry test/stats.js
+129 silly gunzTarPerm modified mode [ 'test/stats.js', 420, 436 ]
+130 silly gunzTarPerm extractEntry test/throws-assertions.js
+131 silly gunzTarPerm modified mode [ 'test/throws-assertions.js', 420, 436 ]
+132 silly gunzTarPerm extractEntry test/optional-backends.js
+133 silly gunzTarPerm modified mode [ 'test/optional-backends.js', 420, 436 ]
+134 silly gunzTarPerm extractEntry test/circular-objects.js
+135 silly gunzTarPerm modified mode [ 'test/circular-objects.js', 420, 436 ]
+136 silly gunzTarPerm extractEntry test/pid-and-host.js
+137 silly gunzTarPerm modified mode [ 'test/pid-and-host.js', 420, 436 ]
+138 silly gunzTarPerm extractEntry test/child-logger.js
+139 silly gunzTarPerm modified mode [ 'test/child-logger.js', 420, 436 ]
+140 silly gunzTarPerm extractEntry test/raw-logger.js
+141 silly gunzTarPerm modified mode [ 'test/raw-logger.js', 420, 436 ]
+142 silly gunzTarPerm extractEntry test/buffer-objects.js
+143 silly gunzTarPerm modified mode [ 'test/buffer-objects.js', 420, 436 ]
+144 silly gunzTarPerm extractEntry test/sentry-errors.js
+145 silly gunzTarPerm modified mode [ 'test/sentry-errors.js', 420, 436 ]
+146 silly gunzTarPerm extractEntry test/basemetaTransform.js
+147 silly gunzTarPerm modified mode [ 'test/basemetaTransform.js', 420, 436 ]
+148 silly gunzTarPerm extractEntry test/sentry.js
+149 silly gunzTarPerm modified mode [ 'test/sentry.js', 420, 436 ]
+150 silly gunzTarPerm extractEntry test/index.js
+151 silly gunzTarPerm modified mode [ 'test/index.js', 420, 436 ]
+152 silly gunzTarPerm extractEntry test/writing-weird-meta-objects.js
+153 silly gunzTarPerm modified mode [ 'test/writing-weird-meta-objects.js', 420, 436 ]
+154 silly gunzTarPerm extractEntry test/instrument.js
+155 silly gunzTarPerm modified mode [ 'test/instrument.js', 420, 436 ]
+156 silly gunzTarPerm extractEntry test/lib/capture-stdio.js
+157 silly gunzTarPerm modified mode [ 'test/lib/capture-stdio.js', 420, 436 ]
+158 silly gunzTarPerm extractEntry test/lib/console-logger.js
+159 silly gunzTarPerm modified mode [ 'test/lib/console-logger.js', 420, 436 ]
+160 silly gunzTarPerm extractEntry test/lib/fat-logger.js
+161 silly gunzTarPerm modified mode [ 'test/lib/fat-logger.js', 420, 436 ]
+162 silly gunzTarPerm extractEntry test/lib/file-logger.js
+163 silly gunzTarPerm modified mode [ 'test/lib/file-logger.js', 420, 436 ]
+164 silly gunzTarPerm extractEntry test/lib/kafka-logger.js
+165 silly gunzTarPerm modified mode [ 'test/lib/kafka-logger.js', 420, 436 ]
+166 silly gunzTarPerm extractEntry test/lib/sentry-logger.js
+167 silly gunzTarPerm modified mode [ 'test/lib/sentry-logger.js', 420, 436 ]
+168 silly gunzTarPerm extractEntry test/config/server.properties
+169 silly gunzTarPerm modified mode [ 'test/config/server.properties', 420, 436 ]
+170 silly gunzTarPerm extractEntry test/config/zookeeper.properties
+171 silly gunzTarPerm modified mode [ 'test/config/zookeeper.properties', 420, 436 ]
+172 silly gunzTarPerm extractEntry transforms/pid-and-host.js
+173 silly gunzTarPerm modified mode [ 'transforms/pid-and-host.js', 420, 436 ]
+174 silly gunzTarPerm extractEntry transforms/safe-serialize-meta.js
+175 silly gunzTarPerm modified mode [ 'transforms/safe-serialize-meta.js', 420, 436 ]
+176 silly gunzTarPerm extractEntry transforms/serialize-error.js
+177 silly gunzTarPerm modified mode [ 'transforms/serialize-error.js', 420, 436 ]
+178 silly gunzTarPerm extractEntry transforms/xtend.js
+179 silly gunzTarPerm modified mode [ 'transforms/xtend.js', 420, 436 ]
+180 silly lockFile bfa7423b-ud-tripper1-node-modules-logtron tar:///home/soumik/Projects/nodejs/cloud_tripper1/node_modules/logtron
+181 silly lockFile bfa7423b-ud-tripper1-node-modules-logtron tar:///home/soumik/Projects/nodejs/cloud_tripper1/node_modules/logtron
+182 silly lockFile cc2bb9e2-ik-npm-logtron-8-5-0-package-tgz tar:///home/soumik/.npm/logtron/8.5.0/package.tgz
+183 silly lockFile cc2bb9e2-ik-npm-logtron-8-5-0-package-tgz tar:///home/soumik/.npm/logtron/8.5.0/package.tgz
+184 info preinstall logtron@8.5.0
+185 verbose readDependencies using package.json deps
+186 verbose readDependencies using package.json deps
+187 verbose cache add [ 'airlock@^2.1.1', null ]
+188 verbose cache add name=undefined spec="airlock@^2.1.1" args=["airlock@^2.1.1",null]
+189 verbose parsed url { protocol: null,
+189 verbose parsed url   slashes: null,
+189 verbose parsed url   auth: null,
+189 verbose parsed url   host: null,
+189 verbose parsed url   port: null,
+189 verbose parsed url   hostname: null,
+189 verbose parsed url   hash: null,
+189 verbose parsed url   search: null,
+189 verbose parsed url   query: null,
+189 verbose parsed url   pathname: 'airlock@^2.1.1',
+189 verbose parsed url   path: 'airlock@^2.1.1',
+189 verbose parsed url   href: 'airlock@^2.1.1' }
+190 verbose cache add [ 'core-util-is@^1.0.1', null ]
+191 verbose cache add name=undefined spec="core-util-is@^1.0.1" args=["core-util-is@^1.0.1",null]
+192 verbose parsed url { protocol: null,
+192 verbose parsed url   slashes: null,
+192 verbose parsed url   auth: null,
+192 verbose parsed url   host: null,
+192 verbose parsed url   port: null,
+192 verbose parsed url   hostname: null,
+192 verbose parsed url   hash: null,
+192 verbose parsed url   search: null,
+192 verbose parsed url   query: null,
+192 verbose parsed url   pathname: 'core-util-is@^1.0.1',
+192 verbose parsed url   path: 'core-util-is@^1.0.1',
+192 verbose parsed url   href: 'core-util-is@^1.0.1' }
+193 verbose cache add name="airlock" spec="^2.1.1" args=["airlock","^2.1.1"]
+194 verbose parsed url { protocol: null,
+194 verbose parsed url   slashes: null,
+194 verbose parsed url   auth: null,
+194 verbose parsed url   host: null,
+194 verbose parsed url   port: null,
+194 verbose parsed url   hostname: null,
+194 verbose parsed url   hash: null,
+194 verbose parsed url   search: null,
+194 verbose parsed url   query: null,
+194 verbose parsed url   pathname: '^2.1.1',
+194 verbose parsed url   path: '^2.1.1',
+194 verbose parsed url   href: '^2.1.1' }
+195 verbose addNamed [ 'airlock', '^2.1.1' ]
+196 verbose addNamed [ null, '>=2.1.1-0 <3.0.0-0' ]
+197 silly lockFile 11aa0d0c-airlock-2-1-1 airlock@^2.1.1
+198 verbose lock airlock@^2.1.1 /home/soumik/.npm/11aa0d0c-airlock-2-1-1.lock
+199 verbose cache add name="core-util-is" spec="^1.0.1" args=["core-util-is","^1.0.1"]
+200 verbose parsed url { protocol: null,
+200 verbose parsed url   slashes: null,
+200 verbose parsed url   auth: null,
+200 verbose parsed url   host: null,
+200 verbose parsed url   port: null,
+200 verbose parsed url   hostname: null,
+200 verbose parsed url   hash: null,
+200 verbose parsed url   search: null,
+200 verbose parsed url   query: null,
+200 verbose parsed url   pathname: '^1.0.1',
+200 verbose parsed url   path: '^1.0.1',
+200 verbose parsed url   href: '^1.0.1' }
+201 verbose addNamed [ 'core-util-is', '^1.0.1' ]
+202 verbose addNamed [ null, '>=1.0.1-0 <2.0.0-0' ]
+203 silly lockFile 802d0ae1-core-util-is-1-0-1 core-util-is@^1.0.1
+204 verbose lock core-util-is@^1.0.1 /home/soumik/.npm/802d0ae1-core-util-is-1-0-1.lock
+205 verbose cache add [ 'inherits@^2.0.1', null ]
+206 verbose cache add name=undefined spec="inherits@^2.0.1" args=["inherits@^2.0.1",null]
+207 verbose parsed url { protocol: null,
+207 verbose parsed url   slashes: null,
+207 verbose parsed url   auth: null,
+207 verbose parsed url   host: null,
+207 verbose parsed url   port: null,
+207 verbose parsed url   hostname: null,
+207 verbose parsed url   hash: null,
+207 verbose parsed url   search: null,
+207 verbose parsed url   query: null,
+207 verbose parsed url   pathname: 'inherits@^2.0.1',
+207 verbose parsed url   path: 'inherits@^2.0.1',
+207 verbose parsed url   href: 'inherits@^2.0.1' }
+208 verbose cache add [ 'deep-extend@0.4.0', null ]
+209 verbose cache add name=undefined spec="deep-extend@0.4.0" args=["deep-extend@0.4.0",null]
+210 verbose parsed url { protocol: null,
+210 verbose parsed url   slashes: null,
+210 verbose parsed url   auth: null,
+210 verbose parsed url   host: null,
+210 verbose parsed url   port: null,
+210 verbose parsed url   hostname: null,
+210 verbose parsed url   hash: null,
+210 verbose parsed url   search: null,
+210 verbose parsed url   query: null,
+210 verbose parsed url   pathname: 'deep-extend@0.4.0',
+210 verbose parsed url   path: 'deep-extend@0.4.0',
+210 verbose parsed url   href: 'deep-extend@0.4.0' }
+211 verbose cache add [ 'kafka-logger@^5.0.1', null ]
+212 verbose cache add name=undefined spec="kafka-logger@^5.0.1" args=["kafka-logger@^5.0.1",null]
+213 verbose parsed url { protocol: null,
+213 verbose parsed url   slashes: null,
+213 verbose parsed url   auth: null,
+213 verbose parsed url   host: null,
+213 verbose parsed url   port: null,
+213 verbose parsed url   hostname: null,
+213 verbose parsed url   hash: null,
+213 verbose parsed url   search: null,
+213 verbose parsed url   query: null,
+213 verbose parsed url   pathname: 'kafka-logger@^5.0.1',
+213 verbose parsed url   path: 'kafka-logger@^5.0.1',
+213 verbose parsed url   href: 'kafka-logger@^5.0.1' }
+214 verbose cache add [ 'error@^7.0.1', null ]
+215 verbose cache add name=undefined spec="error@^7.0.1" args=["error@^7.0.1",null]
+216 verbose parsed url { protocol: null,
+216 verbose parsed url   slashes: null,
+216 verbose parsed url   auth: null,
+216 verbose parsed url   host: null,
+216 verbose parsed url   port: null,
+216 verbose parsed url   hostname: null,
+216 verbose parsed url   hash: null,
+216 verbose parsed url   search: null,
+216 verbose parsed url   query: null,
+216 verbose parsed url   pathname: 'error@^7.0.1',
+216 verbose parsed url   path: 'error@^7.0.1',
+216 verbose parsed url   href: 'error@^7.0.1' }
+217 verbose cache add [ 'lodash.isfinite@~2.4.1', null ]
+218 verbose cache add name=undefined spec="lodash.isfinite@~2.4.1" args=["lodash.isfinite@~2.4.1",null]
+219 verbose parsed url { protocol: null,
+219 verbose parsed url   slashes: null,
+219 verbose parsed url   auth: null,
+219 verbose parsed url   host: null,
+219 verbose parsed url   port: null,
+219 verbose parsed url   hostname: null,
+219 verbose parsed url   hash: null,
+219 verbose parsed url   search: null,
+219 verbose parsed url   query: null,
+219 verbose parsed url   pathname: 'lodash.isfinite@~2.4.1',
+219 verbose parsed url   path: 'lodash.isfinite@~2.4.1',
+219 verbose parsed url   href: 'lodash.isfinite@~2.4.1' }
+220 verbose cache add [ 'mkdirp@~0.3.5', null ]
+221 verbose cache add name=undefined spec="mkdirp@~0.3.5" args=["mkdirp@~0.3.5",null]
+222 verbose parsed url { protocol: null,
+222 verbose parsed url   slashes: null,
+222 verbose parsed url   auth: null,
+222 verbose parsed url   host: null,
+222 verbose parsed url   port: null,
+222 verbose parsed url   hostname: null,
+222 verbose parsed url   hash: null,
+222 verbose parsed url   search: null,
+222 verbose parsed url   query: null,
+222 verbose parsed url   pathname: 'mkdirp@~0.3.5',
+222 verbose parsed url   path: 'mkdirp@~0.3.5',
+222 verbose parsed url   href: 'mkdirp@~0.3.5' }
+223 verbose cache add name="inherits" spec="^2.0.1" args=["inherits","^2.0.1"]
+224 verbose parsed url { protocol: null,
+224 verbose parsed url   slashes: null,
+224 verbose parsed url   auth: null,
+224 verbose parsed url   host: null,
+224 verbose parsed url   port: null,
+224 verbose parsed url   hostname: null,
+224 verbose parsed url   hash: null,
+224 verbose parsed url   search: null,
+224 verbose parsed url   query: null,
+224 verbose parsed url   pathname: '^2.0.1',
+224 verbose parsed url   path: '^2.0.1',
+224 verbose parsed url   href: '^2.0.1' }
+225 verbose addNamed [ 'inherits', '^2.0.1' ]
+226 verbose addNamed [ null, '>=2.0.1-0 <3.0.0-0' ]
+227 silly lockFile 5f977916-inherits-2-0-1 inherits@^2.0.1
+228 verbose lock inherits@^2.0.1 /home/soumik/.npm/5f977916-inherits-2-0-1.lock
+229 verbose cache add name="deep-extend" spec="0.4.0" args=["deep-extend","0.4.0"]
+230 verbose parsed url { protocol: null,
+230 verbose parsed url   slashes: null,
+230 verbose parsed url   auth: null,
+230 verbose parsed url   host: null,
+230 verbose parsed url   port: null,
+230 verbose parsed url   hostname: null,
+230 verbose parsed url   hash: null,
+230 verbose parsed url   search: null,
+230 verbose parsed url   query: null,
+230 verbose parsed url   pathname: '0.4.0',
+230 verbose parsed url   path: '0.4.0',
+230 verbose parsed url   href: '0.4.0' }
+231 verbose addNamed [ 'deep-extend', '0.4.0' ]
+232 verbose addNamed [ '0.4.0', '0.4.0' ]
+233 silly lockFile 9d4431c2-deep-extend-0-4-0 deep-extend@0.4.0
+234 verbose lock deep-extend@0.4.0 /home/soumik/.npm/9d4431c2-deep-extend-0-4-0.lock
+235 verbose cache add name="kafka-logger" spec="^5.0.1" args=["kafka-logger","^5.0.1"]
+236 verbose parsed url { protocol: null,
+236 verbose parsed url   slashes: null,
+236 verbose parsed url   auth: null,
+236 verbose parsed url   host: null,
+236 verbose parsed url   port: null,
+236 verbose parsed url   hostname: null,
+236 verbose parsed url   hash: null,
+236 verbose parsed url   search: null,
+236 verbose parsed url   query: null,
+236 verbose parsed url   pathname: '^5.0.1',
+236 verbose parsed url   path: '^5.0.1',
+236 verbose parsed url   href: '^5.0.1' }
+237 verbose addNamed [ 'kafka-logger', '^5.0.1' ]
+238 verbose addNamed [ null, '>=5.0.1-0 <6.0.0-0' ]
+239 silly lockFile 79256040-kafka-logger-5-0-1 kafka-logger@^5.0.1
+240 verbose lock kafka-logger@^5.0.1 /home/soumik/.npm/79256040-kafka-logger-5-0-1.lock
+241 verbose cache add name="error" spec="^7.0.1" args=["error","^7.0.1"]
+242 verbose parsed url { protocol: null,
+242 verbose parsed url   slashes: null,
+242 verbose parsed url   auth: null,
+242 verbose parsed url   host: null,
+242 verbose parsed url   port: null,
+242 verbose parsed url   hostname: null,
+242 verbose parsed url   hash: null,
+242 verbose parsed url   search: null,
+242 verbose parsed url   query: null,
+242 verbose parsed url   pathname: '^7.0.1',
+242 verbose parsed url   path: '^7.0.1',
+242 verbose parsed url   href: '^7.0.1' }
+243 verbose addNamed [ 'error', '^7.0.1' ]
+244 verbose addNamed [ null, '>=7.0.1-0 <8.0.0-0' ]
+245 silly lockFile 3e4d3be5-error-7-0-1 error@^7.0.1
+246 verbose lock error@^7.0.1 /home/soumik/.npm/3e4d3be5-error-7-0-1.lock
+247 verbose cache add name="lodash.isfinite" spec="~2.4.1" args=["lodash.isfinite","~2.4.1"]
+248 verbose parsed url { protocol: null,
+248 verbose parsed url   slashes: null,
+248 verbose parsed url   auth: null,
+248 verbose parsed url   host: null,
+248 verbose parsed url   port: null,
+248 verbose parsed url   hostname: null,
+248 verbose parsed url   hash: null,
+248 verbose parsed url   search: null,
+248 verbose parsed url   query: null,
+248 verbose parsed url   pathname: '~2.4.1',
+248 verbose parsed url   path: '~2.4.1',
+248 verbose parsed url   href: '~2.4.1' }
+249 verbose addNamed [ 'lodash.isfinite', '~2.4.1' ]
+250 verbose addNamed [ null, '>=2.4.1-0 <2.5.0-0' ]
+251 silly lockFile 1bdb79fe-lodash-isfinite-2-4-1 lodash.isfinite@~2.4.1
+252 verbose lock lodash.isfinite@~2.4.1 /home/soumik/.npm/1bdb79fe-lodash-isfinite-2-4-1.lock
+253 verbose cache add name="mkdirp" spec="~0.3.5" args=["mkdirp","~0.3.5"]
+254 verbose parsed url { protocol: null,
+254 verbose parsed url   slashes: null,
+254 verbose parsed url   auth: null,
+254 verbose parsed url   host: null,
+254 verbose parsed url   port: null,
+254 verbose parsed url   hostname: null,
+254 verbose parsed url   hash: null,
+254 verbose parsed url   search: null,
+254 verbose parsed url   query: null,
+254 verbose parsed url   pathname: '~0.3.5',
+254 verbose parsed url   path: '~0.3.5',
+254 verbose parsed url   href: '~0.3.5' }
+255 verbose addNamed [ 'mkdirp', '~0.3.5' ]
+256 verbose addNamed [ null, '>=0.3.5-0 <0.4.0-0' ]
+257 silly lockFile c3f0fe9b-mkdirp-0-3-5 mkdirp@~0.3.5
+258 verbose lock mkdirp@~0.3.5 /home/soumik/.npm/c3f0fe9b-mkdirp-0-3-5.lock
+259 verbose cache add [ 'nodemailer@~0.5.14', null ]
+260 verbose cache add name=undefined spec="nodemailer@~0.5.14" args=["nodemailer@~0.5.14",null]
+261 verbose parsed url { protocol: null,
+261 verbose parsed url   slashes: null,
+261 verbose parsed url   auth: null,
+261 verbose parsed url   host: null,
+261 verbose parsed url   port: null,
+261 verbose parsed url   hostname: null,
+261 verbose parsed url   hash: null,
+261 verbose parsed url   search: null,
+261 verbose parsed url   query: null,
+261 verbose parsed url   pathname: 'nodemailer@~0.5.14',
+261 verbose parsed url   path: 'nodemailer@~0.5.14',
+261 verbose parsed url   href: 'nodemailer@~0.5.14' }
+262 verbose cache add [ 'readable-stream@^1.0.27-1', null ]
+263 verbose cache add name=undefined spec="readable-stream@^1.0.27-1" args=["readable-stream@^1.0.27-1",null]
+264 verbose parsed url { protocol: null,
+264 verbose parsed url   slashes: null,
+264 verbose parsed url   auth: null,
+264 verbose parsed url   host: null,
+264 verbose parsed url   port: null,
+264 verbose parsed url   hostname: null,
+264 verbose parsed url   hash: null,
+264 verbose parsed url   search: null,
+264 verbose parsed url   query: null,
+264 verbose parsed url   pathname: 'readable-stream@^1.0.27-1',
+264 verbose parsed url   path: 'readable-stream@^1.0.27-1',
+264 verbose parsed url   href: 'readable-stream@^1.0.27-1' }
+265 verbose cache add [ 'sentry-logger@^3.0.3', null ]
+266 verbose cache add name=undefined spec="sentry-logger@^3.0.3" args=["sentry-logger@^3.0.3",null]
+267 verbose parsed url { protocol: null,
+267 verbose parsed url   slashes: null,
+267 verbose parsed url   auth: null,
+267 verbose parsed url   host: null,
+267 verbose parsed url   port: null,
+267 verbose parsed url   hostname: null,
+267 verbose parsed url   hash: null,
+267 verbose parsed url   search: null,
+267 verbose parsed url   query: null,
+267 verbose parsed url   pathname: 'sentry-logger@^3.0.3',
+267 verbose parsed url   path: 'sentry-logger@^3.0.3',
+267 verbose parsed url   href: 'sentry-logger@^3.0.3' }
+268 verbose cache add [ 'uber-raven@^0.6.3-project-name', null ]
+269 verbose cache add name=undefined spec="uber-raven@^0.6.3-project-name" args=["uber-raven@^0.6.3-project-name",null]
+270 verbose parsed url { protocol: null,
+270 verbose parsed url   slashes: null,
+270 verbose parsed url   auth: null,
+270 verbose parsed url   host: null,
+270 verbose parsed url   port: null,
+270 verbose parsed url   hostname: null,
+270 verbose parsed url   hash: null,
+270 verbose parsed url   search: null,
+270 verbose parsed url   query: null,
+270 verbose parsed url   pathname: 'uber-raven@^0.6.3-project-name',
+270 verbose parsed url   path: 'uber-raven@^0.6.3-project-name',
+270 verbose parsed url   href: 'uber-raven@^0.6.3-project-name' }
+271 verbose cache add [ 'winston-uber@^1.0.0', null ]
+272 verbose cache add name=undefined spec="winston-uber@^1.0.0" args=["winston-uber@^1.0.0",null]
+273 verbose parsed url { protocol: null,
+273 verbose parsed url   slashes: null,
+273 verbose parsed url   auth: null,
+273 verbose parsed url   host: null,
+273 verbose parsed url   port: null,
+273 verbose parsed url   hostname: null,
+273 verbose parsed url   hash: null,
+273 verbose parsed url   search: null,
+273 verbose parsed url   query: null,
+273 verbose parsed url   pathname: 'winston-uber@^1.0.0',
+273 verbose parsed url   path: 'winston-uber@^1.0.0',
+273 verbose parsed url   href: 'winston-uber@^1.0.0' }
+274 verbose cache add [ 'xtend@^4.0.0', null ]
+275 verbose cache add name=undefined spec="xtend@^4.0.0" args=["xtend@^4.0.0",null]
+276 verbose parsed url { protocol: null,
+276 verbose parsed url   slashes: null,
+276 verbose parsed url   auth: null,
+276 verbose parsed url   host: null,
+276 verbose parsed url   port: null,
+276 verbose parsed url   hostname: null,
+276 verbose parsed url   hash: null,
+276 verbose parsed url   search: null,
+276 verbose parsed url   query: null,
+276 verbose parsed url   pathname: 'xtend@^4.0.0',
+276 verbose parsed url   path: 'xtend@^4.0.0',
+276 verbose parsed url   href: 'xtend@^4.0.0' }
+277 silly addNameRange { name: 'airlock', range: '>=2.1.1-0 <3.0.0-0', hasData: false }
+278 silly addNameRange { name: 'core-util-is',
+278 silly addNameRange   range: '>=1.0.1-0 <2.0.0-0',
+278 silly addNameRange   hasData: false }
+279 verbose cache add name="nodemailer" spec="~0.5.14" args=["nodemailer","~0.5.14"]
+280 verbose parsed url { protocol: null,
+280 verbose parsed url   slashes: null,
+280 verbose parsed url   auth: null,
+280 verbose parsed url   host: null,
+280 verbose parsed url   port: null,
+280 verbose parsed url   hostname: null,
+280 verbose parsed url   hash: null,
+280 verbose parsed url   search: null,
+280 verbose parsed url   query: null,
+280 verbose parsed url   pathname: '~0.5.14',
+280 verbose parsed url   path: '~0.5.14',
+280 verbose parsed url   href: '~0.5.14' }
+281 verbose addNamed [ 'nodemailer', '~0.5.14' ]
+282 verbose addNamed [ null, '>=0.5.14-0 <0.6.0-0' ]
+283 silly lockFile 2088a896-nodemailer-0-5-14 nodemailer@~0.5.14
+284 verbose lock nodemailer@~0.5.14 /home/soumik/.npm/2088a896-nodemailer-0-5-14.lock
+285 verbose cache add name="readable-stream" spec="^1.0.27-1" args=["readable-stream","^1.0.27-1"]
+286 verbose parsed url { protocol: null,
+286 verbose parsed url   slashes: null,
+286 verbose parsed url   auth: null,
+286 verbose parsed url   host: null,
+286 verbose parsed url   port: null,
+286 verbose parsed url   hostname: null,
+286 verbose parsed url   hash: null,
+286 verbose parsed url   search: null,
+286 verbose parsed url   query: null,
+286 verbose parsed url   pathname: '^1.0.27-1',
+286 verbose parsed url   path: '^1.0.27-1',
+286 verbose parsed url   href: '^1.0.27-1' }
+287 verbose addNamed [ 'readable-stream', '^1.0.27-1' ]
+288 verbose addNamed [ null, '>=1.0.27-1 <2.0.0-0' ]
+289 silly lockFile b2bef7d7-readable-stream-1-0-27-1 readable-stream@^1.0.27-1
+290 verbose lock readable-stream@^1.0.27-1 /home/soumik/.npm/b2bef7d7-readable-stream-1-0-27-1.lock
+291 verbose cache add name="sentry-logger" spec="^3.0.3" args=["sentry-logger","^3.0.3"]
+292 verbose parsed url { protocol: null,
+292 verbose parsed url   slashes: null,
+292 verbose parsed url   auth: null,
+292 verbose parsed url   host: null,
+292 verbose parsed url   port: null,
+292 verbose parsed url   hostname: null,
+292 verbose parsed url   hash: null,
+292 verbose parsed url   search: null,
+292 verbose parsed url   query: null,
+292 verbose parsed url   pathname: '^3.0.3',
+292 verbose parsed url   path: '^3.0.3',
+292 verbose parsed url   href: '^3.0.3' }
+293 verbose addNamed [ 'sentry-logger', '^3.0.3' ]
+294 verbose addNamed [ null, '>=3.0.3-0 <4.0.0-0' ]
+295 silly lockFile 6e7f63e5-sentry-logger-3-0-3 sentry-logger@^3.0.3
+296 verbose lock sentry-logger@^3.0.3 /home/soumik/.npm/6e7f63e5-sentry-logger-3-0-3.lock
+297 verbose cache add name="uber-raven" spec="^0.6.3-project-name" args=["uber-raven","^0.6.3-project-name"]
+298 verbose parsed url { protocol: null,
+298 verbose parsed url   slashes: null,
+298 verbose parsed url   auth: null,
+298 verbose parsed url   host: null,
+298 verbose parsed url   port: null,
+298 verbose parsed url   hostname: null,
+298 verbose parsed url   hash: null,
+298 verbose parsed url   search: null,
+298 verbose parsed url   query: null,
+298 verbose parsed url   pathname: '^0.6.3-project-name',
+298 verbose parsed url   path: '^0.6.3-project-name',
+298 verbose parsed url   href: '^0.6.3-project-name' }
+299 verbose addNamed [ 'uber-raven', '^0.6.3-project-name' ]
+300 verbose addNamed [ null, '>=0.6.3-project-name <0.7.0-0' ]
+301 silly lockFile b618e737-uber-raven-0-6-3-project-name uber-raven@^0.6.3-project-name
+302 verbose lock uber-raven@^0.6.3-project-name /home/soumik/.npm/b618e737-uber-raven-0-6-3-project-name.lock
+303 verbose cache add name="winston-uber" spec="^1.0.0" args=["winston-uber","^1.0.0"]
+304 verbose parsed url { protocol: null,
+304 verbose parsed url   slashes: null,
+304 verbose parsed url   auth: null,
+304 verbose parsed url   host: null,
+304 verbose parsed url   port: null,
+304 verbose parsed url   hostname: null,
+304 verbose parsed url   hash: null,
+304 verbose parsed url   search: null,
+304 verbose parsed url   query: null,
+304 verbose parsed url   pathname: '^1.0.0',
+304 verbose parsed url   path: '^1.0.0',
+304 verbose parsed url   href: '^1.0.0' }
+305 verbose addNamed [ 'winston-uber', '^1.0.0' ]
+306 verbose addNamed [ null, '>=1.0.0-0 <2.0.0-0' ]
+307 silly lockFile 93f5dd58-winston-uber-1-0-0 winston-uber@^1.0.0
+308 verbose lock winston-uber@^1.0.0 /home/soumik/.npm/93f5dd58-winston-uber-1-0-0.lock
+309 verbose cache add name="xtend" spec="^4.0.0" args=["xtend","^4.0.0"]
+310 verbose parsed url { protocol: null,
+310 verbose parsed url   slashes: null,
+310 verbose parsed url   auth: null,
+310 verbose parsed url   host: null,
+310 verbose parsed url   port: null,
+310 verbose parsed url   hostname: null,
+310 verbose parsed url   hash: null,
+310 verbose parsed url   search: null,
+310 verbose parsed url   query: null,
+310 verbose parsed url   pathname: '^4.0.0',
+310 verbose parsed url   path: '^4.0.0',
+310 verbose parsed url   href: '^4.0.0' }
+311 verbose addNamed [ 'xtend', '^4.0.0' ]
+312 verbose addNamed [ null, '>=4.0.0-0 <5.0.0-0' ]
+313 silly lockFile 409d9c3a-xtend-4-0-0 xtend@^4.0.0
+314 verbose lock xtend@^4.0.0 /home/soumik/.npm/409d9c3a-xtend-4-0-0.lock
+315 silly addNameRange { name: 'inherits', range: '>=2.0.1-0 <3.0.0-0', hasData: false }
+316 silly addNameRange { name: 'kafka-logger',
+316 silly addNameRange   range: '>=5.0.1-0 <6.0.0-0',
+316 silly addNameRange   hasData: false }
+317 silly addNameRange { name: 'error', range: '>=7.0.1-0 <8.0.0-0', hasData: false }
+318 silly addNameRange { name: 'lodash.isfinite',
+318 silly addNameRange   range: '>=2.4.1-0 <2.5.0-0',
+318 silly addNameRange   hasData: false }
+319 silly addNameRange { name: 'mkdirp', range: '>=0.3.5-0 <0.4.0-0', hasData: false }
+320 silly addNameRange { name: 'nodemailer',
+320 silly addNameRange   range: '>=0.5.14-0 <0.6.0-0',
+320 silly addNameRange   hasData: false }
+321 silly addNameRange { name: 'readable-stream',
+321 silly addNameRange   range: '>=1.0.27-1 <2.0.0-0',
+321 silly addNameRange   hasData: false }
+322 silly addNameRange { name: 'sentry-logger',
+322 silly addNameRange   range: '>=3.0.3-0 <4.0.0-0',
+322 silly addNameRange   hasData: false }
+323 silly addNameRange { name: 'uber-raven',
+323 silly addNameRange   range: '>=0.6.3-project-name <0.7.0-0',
+323 silly addNameRange   hasData: false }
+324 silly addNameRange { name: 'xtend', range: '>=4.0.0-0 <5.0.0-0', hasData: false }
+325 silly addNameRange { name: 'winston-uber',
+325 silly addNameRange   range: '>=1.0.0-0 <2.0.0-0',
+325 silly addNameRange   hasData: false }
+326 verbose request where is /airlock
+327 verbose request registry https://registry.npmjs.org/
+328 verbose url raw /airlock
+329 verbose url resolving [ 'https://registry.npmjs.org/', './airlock' ]
+330 verbose url resolved https://registry.npmjs.org/airlock
+331 verbose request where is https://registry.npmjs.org/airlock
+332 info trying registry request attempt 1 at 01:10:58
+333 verbose etag "CYHL55JVP7BNSU1Z31RNP4UZW"
+334 http GET https://registry.npmjs.org/airlock
+335 verbose request where is /core-util-is
+336 verbose request registry https://registry.npmjs.org/
+337 verbose url raw /core-util-is
+338 verbose url resolving [ 'https://registry.npmjs.org/', './core-util-is' ]
+339 verbose url resolved https://registry.npmjs.org/core-util-is
+340 verbose request where is https://registry.npmjs.org/core-util-is
+341 info trying registry request attempt 1 at 01:10:58
+342 verbose etag "8N932ER6J79FE9PNV7H41QYLJ"
+343 http GET https://registry.npmjs.org/core-util-is
+344 verbose request where is /inherits
+345 verbose request registry https://registry.npmjs.org/
+346 verbose url raw /inherits
+347 verbose url resolving [ 'https://registry.npmjs.org/', './inherits' ]
+348 verbose url resolved https://registry.npmjs.org/inherits
+349 verbose request where is https://registry.npmjs.org/inherits
+350 info trying registry request attempt 1 at 01:10:58
+351 verbose etag "DPT0HCFHSA8NG4H8MNHKEH1FI"
+352 http GET https://registry.npmjs.org/inherits
+353 verbose request where is /deep-extend
+354 verbose request registry https://registry.npmjs.org/
+355 verbose url raw /deep-extend
+356 verbose url resolving [ 'https://registry.npmjs.org/', './deep-extend' ]
+357 verbose url resolved https://registry.npmjs.org/deep-extend
+358 verbose request where is https://registry.npmjs.org/deep-extend
+359 info trying registry request attempt 1 at 01:10:58
+360 verbose etag "5H8PMPV1CVMOAZOFMATPVP6GO"
+361 http GET https://registry.npmjs.org/deep-extend
+362 verbose request where is /kafka-logger
+363 verbose request registry https://registry.npmjs.org/
+364 verbose url raw /kafka-logger
+365 verbose url resolving [ 'https://registry.npmjs.org/', './kafka-logger' ]
+366 verbose url resolved https://registry.npmjs.org/kafka-logger
+367 verbose request where is https://registry.npmjs.org/kafka-logger
+368 info trying registry request attempt 1 at 01:10:58
+369 verbose etag "6OQLX9VB9JVX5YYHU6BEDRKD0"
+370 http GET https://registry.npmjs.org/kafka-logger
+371 verbose request where is /error
+372 verbose request registry https://registry.npmjs.org/
+373 verbose url raw /error
+374 verbose url resolving [ 'https://registry.npmjs.org/', './error' ]
+375 verbose url resolved https://registry.npmjs.org/error
+376 verbose request where is https://registry.npmjs.org/error
+377 info trying registry request attempt 1 at 01:10:58
+378 verbose etag "ATDXPYO9XZLB4JMX62UBLH9ZJ"
+379 http GET https://registry.npmjs.org/error
+380 verbose request where is /lodash.isfinite
+381 verbose request registry https://registry.npmjs.org/
+382 verbose url raw /lodash.isfinite
+383 verbose url resolving [ 'https://registry.npmjs.org/', './lodash.isfinite' ]
+384 verbose url resolved https://registry.npmjs.org/lodash.isfinite
+385 verbose request where is https://registry.npmjs.org/lodash.isfinite
+386 info trying registry request attempt 1 at 01:10:58
+387 verbose etag "1KF4T3AZR1LEVLO6E686X01AK"
+388 http GET https://registry.npmjs.org/lodash.isfinite
+389 verbose request where is /mkdirp
+390 verbose request registry https://registry.npmjs.org/
+391 verbose url raw /mkdirp
+392 verbose url resolving [ 'https://registry.npmjs.org/', './mkdirp' ]
+393 verbose url resolved https://registry.npmjs.org/mkdirp
+394 verbose request where is https://registry.npmjs.org/mkdirp
+395 info trying registry request attempt 1 at 01:10:58
+396 verbose etag "WC1HKTT7K86HMIXTVILULGD4"
+397 http GET https://registry.npmjs.org/mkdirp
+398 verbose request where is /readable-stream
+399 verbose request registry https://registry.npmjs.org/
+400 verbose url raw /readable-stream
+401 verbose url resolving [ 'https://registry.npmjs.org/', './readable-stream' ]
+402 verbose url resolved https://registry.npmjs.org/readable-stream
+403 verbose request where is https://registry.npmjs.org/readable-stream
+404 info trying registry request attempt 1 at 01:10:58
+405 verbose etag "BN7ANL53C49ZOR8ROUQ3U8OK8"
+406 http GET https://registry.npmjs.org/readable-stream
+407 verbose request where is /sentry-logger
+408 verbose request registry https://registry.npmjs.org/
+409 verbose url raw /sentry-logger
+410 verbose url resolving [ 'https://registry.npmjs.org/', './sentry-logger' ]
+411 verbose url resolved https://registry.npmjs.org/sentry-logger
+412 verbose request where is https://registry.npmjs.org/sentry-logger
+413 info trying registry request attempt 1 at 01:10:58
+414 verbose etag "D075SM8HXG85FC626KAXH3QFS"
+415 http GET https://registry.npmjs.org/sentry-logger
+416 verbose request where is /uber-raven
+417 verbose request registry https://registry.npmjs.org/
+418 verbose url raw /uber-raven
+419 verbose url resolving [ 'https://registry.npmjs.org/', './uber-raven' ]
+420 verbose url resolved https://registry.npmjs.org/uber-raven
+421 verbose request where is https://registry.npmjs.org/uber-raven
+422 info trying registry request attempt 1 at 01:10:58
+423 verbose etag "4NBBAYIA7VFFEJPM9JUPIEGT4"
+424 http GET https://registry.npmjs.org/uber-raven
+425 verbose request where is /nodemailer
+426 verbose request registry https://registry.npmjs.org/
+427 verbose url raw /nodemailer
+428 verbose url resolving [ 'https://registry.npmjs.org/', './nodemailer' ]
+429 verbose url resolved https://registry.npmjs.org/nodemailer
+430 verbose request where is https://registry.npmjs.org/nodemailer
+431 info trying registry request attempt 1 at 01:10:58
+432 verbose etag "5IP4A8V8ZP6M3MZ7OGG5F2C3K"
+433 http GET https://registry.npmjs.org/nodemailer
+434 verbose request where is /xtend
+435 verbose request registry https://registry.npmjs.org/
+436 verbose url raw /xtend
+437 verbose url resolving [ 'https://registry.npmjs.org/', './xtend' ]
+438 verbose url resolved https://registry.npmjs.org/xtend
+439 verbose request where is https://registry.npmjs.org/xtend
+440 info trying registry request attempt 1 at 01:10:58
+441 verbose etag "DRVFMF23K6DJ81KYA798DL7SF"
+442 http GET https://registry.npmjs.org/xtend
+443 verbose request where is /winston-uber
+444 verbose request registry https://registry.npmjs.org/
+445 verbose url raw /winston-uber
+446 verbose url resolving [ 'https://registry.npmjs.org/', './winston-uber' ]
+447 verbose url resolved https://registry.npmjs.org/winston-uber
+448 verbose request where is https://registry.npmjs.org/winston-uber
+449 info trying registry request attempt 1 at 01:10:58
+450 verbose etag "3BBMRD0MM7IA4FATJCE5SH2ZM"
+451 http GET https://registry.npmjs.org/winston-uber
+452 http 304 https://registry.npmjs.org/airlock
+453 silly registry.get cb [ 304,
+453 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+453 silly registry.get     via: '1.1 varnish',
+453 silly registry.get     'cache-control': 'max-age=60',
+453 silly registry.get     etag: '"CYHL55JVP7BNSU1Z31RNP4UZW"',
+453 silly registry.get     age: '38',
+453 silly registry.get     connection: 'keep-alive',
+453 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+453 silly registry.get     'x-cache': 'HIT',
+453 silly registry.get     'x-cache-hits': '1',
+453 silly registry.get     'x-timer': 'S1436816458.862939,VS0,VE0',
+453 silly registry.get     vary: 'Accept' } ]
+454 verbose etag https://registry.npmjs.org/airlock from cache
+455 silly addNameRange number 2 { name: 'airlock', range: '>=2.1.1-0 <3.0.0-0', hasData: true }
+456 silly addNameRange versions [ 'airlock',
+456 silly addNameRange   [ '1.0.3', '1.0.4', '2.0.0', '2.0.1', '2.1.0', '2.1.1' ] ]
+457 verbose addNamed [ 'airlock', '2.1.1' ]
+458 verbose addNamed [ '2.1.1', '2.1.1' ]
+459 silly lockFile 13e1812f-airlock-2-1-1 airlock@2.1.1
+460 verbose lock airlock@2.1.1 /home/soumik/.npm/13e1812f-airlock-2-1-1.lock
+461 silly lockFile 13e1812f-airlock-2-1-1 airlock@2.1.1
+462 silly lockFile 13e1812f-airlock-2-1-1 airlock@2.1.1
+463 silly lockFile 11aa0d0c-airlock-2-1-1 airlock@^2.1.1
+464 silly lockFile 11aa0d0c-airlock-2-1-1 airlock@^2.1.1
+465 http 304 https://registry.npmjs.org/core-util-is
+466 silly registry.get cb [ 304,
+466 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+466 silly registry.get     via: '1.1 varnish',
+466 silly registry.get     'cache-control': 'max-age=60',
+466 silly registry.get     etag: '"8N932ER6J79FE9PNV7H41QYLJ"',
+466 silly registry.get     age: '10',
+466 silly registry.get     connection: 'keep-alive',
+466 silly registry.get     'x-served-by': 'cache-sin6920-SIN',
+466 silly registry.get     'x-cache': 'HIT',
+466 silly registry.get     'x-cache-hits': '1',
+466 silly registry.get     'x-timer': 'S1436816458.875160,VS0,VE0',
+466 silly registry.get     vary: 'Accept' } ]
+467 verbose etag https://registry.npmjs.org/core-util-is from cache
+468 silly addNameRange number 2 { name: 'core-util-is',
+468 silly addNameRange   range: '>=1.0.1-0 <2.0.0-0',
+468 silly addNameRange   hasData: true }
+469 silly addNameRange versions [ 'core-util-is', [ '1.0.0', '1.0.1' ] ]
+470 verbose addNamed [ 'core-util-is', '1.0.1' ]
+471 verbose addNamed [ '1.0.1', '1.0.1' ]
+472 silly lockFile 40ef24cf-core-util-is-1-0-1 core-util-is@1.0.1
+473 verbose lock core-util-is@1.0.1 /home/soumik/.npm/40ef24cf-core-util-is-1-0-1.lock
+474 silly lockFile 40ef24cf-core-util-is-1-0-1 core-util-is@1.0.1
+475 silly lockFile 40ef24cf-core-util-is-1-0-1 core-util-is@1.0.1
+476 silly lockFile 802d0ae1-core-util-is-1-0-1 core-util-is@^1.0.1
+477 silly lockFile 802d0ae1-core-util-is-1-0-1 core-util-is@^1.0.1
+478 http 304 https://registry.npmjs.org/inherits
+479 silly registry.get cb [ 304,
+479 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+479 silly registry.get     via: '1.1 varnish',
+479 silly registry.get     'cache-control': 'max-age=60',
+479 silly registry.get     etag: '"DPT0HCFHSA8NG4H8MNHKEH1FI"',
+479 silly registry.get     age: '48',
+479 silly registry.get     connection: 'keep-alive',
+479 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+479 silly registry.get     'x-cache': 'HIT',
+479 silly registry.get     'x-cache-hits': '1',
+479 silly registry.get     'x-timer': 'S1436816458.887077,VS0,VE0',
+479 silly registry.get     vary: 'Accept' } ]
+480 verbose etag https://registry.npmjs.org/inherits from cache
+481 silly addNameRange number 2 { name: 'inherits', range: '>=2.0.1-0 <3.0.0-0', hasData: true }
+482 silly addNameRange versions [ 'inherits', [ '1.0.0', '2.0.0', '2.0.1' ] ]
+483 verbose addNamed [ 'inherits', '2.0.1' ]
+484 verbose addNamed [ '2.0.1', '2.0.1' ]
+485 silly lockFile 2b2e8f1b-inherits-2-0-1 inherits@2.0.1
+486 verbose lock inherits@2.0.1 /home/soumik/.npm/2b2e8f1b-inherits-2-0-1.lock
+487 silly lockFile 2b2e8f1b-inherits-2-0-1 inherits@2.0.1
+488 silly lockFile 2b2e8f1b-inherits-2-0-1 inherits@2.0.1
+489 silly lockFile 5f977916-inherits-2-0-1 inherits@^2.0.1
+490 silly lockFile 5f977916-inherits-2-0-1 inherits@^2.0.1
+491 http 304 https://registry.npmjs.org/deep-extend
+492 silly registry.get cb [ 304,
+492 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+492 silly registry.get     via: '1.1 varnish',
+492 silly registry.get     'cache-control': 'max-age=60',
+492 silly registry.get     etag: '"5H8PMPV1CVMOAZOFMATPVP6GO"',
+492 silly registry.get     age: '0',
+492 silly registry.get     connection: 'keep-alive',
+492 silly registry.get     'x-served-by': 'cache-sin6922-SIN',
+492 silly registry.get     'x-cache': 'HIT',
+492 silly registry.get     'x-cache-hits': '1',
+492 silly registry.get     'x-timer': 'S1436816458.896450,VS0,VE0',
+492 silly registry.get     vary: 'Accept' } ]
+493 verbose etag https://registry.npmjs.org/deep-extend from cache
+494 silly lockFile 92b3d058-eep-extend-deep-extend-0-4-0-tgz https://registry.npmjs.org/deep-extend/-/deep-extend-0.4.0.tgz
+495 verbose lock https://registry.npmjs.org/deep-extend/-/deep-extend-0.4.0.tgz /home/soumik/.npm/92b3d058-eep-extend-deep-extend-0-4-0-tgz.lock
+496 verbose addRemoteTarball [ 'https://registry.npmjs.org/deep-extend/-/deep-extend-0.4.0.tgz',
+496 verbose addRemoteTarball   'f58b46db58eb5d6439cdd0f2e6cafb4739fc1283' ]
+497 http 304 https://registry.npmjs.org/kafka-logger
+498 silly registry.get cb [ 304,
+498 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+498 silly registry.get     via: '1.1 varnish',
+498 silly registry.get     'cache-control': 'max-age=60',
+498 silly registry.get     etag: '"6OQLX9VB9JVX5YYHU6BEDRKD0"',
+498 silly registry.get     age: '38',
+498 silly registry.get     connection: 'keep-alive',
+498 silly registry.get     'x-served-by': 'cache-sin6924-SIN',
+498 silly registry.get     'x-cache': 'HIT',
+498 silly registry.get     'x-cache-hits': '1',
+498 silly registry.get     'x-timer': 'S1436816458.904785,VS0,VE0',
+498 silly registry.get     vary: 'Accept' } ]
+499 verbose etag https://registry.npmjs.org/kafka-logger from cache
+500 info retry fetch attempt 1 at 01:10:58
+501 verbose fetch to= /tmp/npm-3083-QNLbfhVT/registry.npmjs.org/deep-extend/-/deep-extend-0.4.0.tgz
+502 http GET https://registry.npmjs.org/deep-extend/-/deep-extend-0.4.0.tgz
+503 silly addNameRange number 2 { name: 'kafka-logger',
+503 silly addNameRange   range: '>=5.0.1-0 <6.0.0-0',
+503 silly addNameRange   hasData: true }
+504 silly addNameRange versions [ 'kafka-logger',
+504 silly addNameRange   [ '2.0.1',
+504 silly addNameRange     '2.0.0-yosemite',
+504 silly addNameRange     '3.0.0',
+504 silly addNameRange     '3.1.0',
+504 silly addNameRange     '4.0.0',
+504 silly addNameRange     '4.0.0-node-0.12',
+504 silly addNameRange     '4.0.0-node-0.12-1',
+504 silly addNameRange     '4.1.0',
+504 silly addNameRange     '4.2.0',
+504 silly addNameRange     '5.0.0',
+504 silly addNameRange     '4.0.3',
+504 silly addNameRange     '5.0.1' ] ]
+505 verbose addNamed [ 'kafka-logger', '5.0.1' ]
+506 verbose addNamed [ '5.0.1', '5.0.1' ]
+507 silly lockFile 6e630e7d-kafka-logger-5-0-1 kafka-logger@5.0.1
+508 verbose lock kafka-logger@5.0.1 /home/soumik/.npm/6e630e7d-kafka-logger-5-0-1.lock
+509 silly lockFile 6e630e7d-kafka-logger-5-0-1 kafka-logger@5.0.1
+510 silly lockFile 6e630e7d-kafka-logger-5-0-1 kafka-logger@5.0.1
+511 silly lockFile 79256040-kafka-logger-5-0-1 kafka-logger@^5.0.1
+512 silly lockFile 79256040-kafka-logger-5-0-1 kafka-logger@^5.0.1
+513 http 304 https://registry.npmjs.org/error
+514 silly registry.get cb [ 304,
+514 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+514 silly registry.get     via: '1.1 varnish',
+514 silly registry.get     'cache-control': 'max-age=60',
+514 silly registry.get     etag: '"ATDXPYO9XZLB4JMX62UBLH9ZJ"',
+514 silly registry.get     age: '37',
+514 silly registry.get     connection: 'keep-alive',
+514 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+514 silly registry.get     'x-cache': 'HIT',
+514 silly registry.get     'x-cache-hits': '1',
+514 silly registry.get     'x-timer': 'S1436816458.927070,VS0,VE0',
+514 silly registry.get     vary: 'Accept' } ]
+515 verbose etag https://registry.npmjs.org/error from cache
+516 silly addNameRange number 2 { name: 'error', range: '>=7.0.1-0 <8.0.0-0', hasData: true }
+517 silly addNameRange versions [ 'error',
+517 silly addNameRange   [ '0.0.1',
+517 silly addNameRange     '0.0.2',
+517 silly addNameRange     '0.0.3',
+517 silly addNameRange     '0.0.4',
+517 silly addNameRange     '0.0.5',
+517 silly addNameRange     '0.1.0',
+517 silly addNameRange     '1.0.1',
+517 silly addNameRange     '1.0.2',
+517 silly addNameRange     '1.0.3',
+517 silly addNameRange     '2.0.1',
+517 silly addNameRange     '2.0.2',
+517 silly addNameRange     '2.0.3',
+517 silly addNameRange     '2.0.4',
+517 silly addNameRange     '3.0.0',
+517 silly addNameRange     '4.0.0',
+517 silly addNameRange     '4.1.0',
+517 silly addNameRange     '4.1.1',
+517 silly addNameRange     '4.2.0',
+517 silly addNameRange     '4.3.0',
+517 silly addNameRange     '4.4.0',
+517 silly addNameRange     '5.0.0',
+517 silly addNameRange     '5.1.0',
+517 silly addNameRange     '5.1.1',
+517 silly addNameRange     '5.2.0',
+517 silly addNameRange     '6.0.0',
+517 silly addNameRange     '6.0.0-npm-experiment1',
+517 silly addNameRange     '6.0.0-experiment2',
+517 silly addNameRange     '6.0.0-experiment3',
+517 silly addNameRange     '6.1.0',
+517 silly addNameRange     '6.2.0',
+517 silly addNameRange     '6.4.0',
+517 silly addNameRange     '6.4.1',
+517 silly addNameRange     '6.4.2',
+517 silly addNameRange     '7.0.0',
+517 silly addNameRange     '6.4.3',
+517 silly addNameRange     '7.0.1',
+517 silly addNameRange     '7.0.2' ] ]
+518 verbose addNamed [ 'error', '7.0.2' ]
+519 verbose addNamed [ '7.0.2', '7.0.2' ]
+520 silly lockFile 32bea3bc-error-7-0-2 error@7.0.2
+521 verbose lock error@7.0.2 /home/soumik/.npm/32bea3bc-error-7-0-2.lock
+522 silly lockFile 32bea3bc-error-7-0-2 error@7.0.2
+523 silly lockFile 32bea3bc-error-7-0-2 error@7.0.2
+524 silly lockFile 3e4d3be5-error-7-0-1 error@^7.0.1
+525 silly lockFile 3e4d3be5-error-7-0-1 error@^7.0.1
+526 http 304 https://registry.npmjs.org/lodash.isfinite
+527 silly registry.get cb [ 304,
+527 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+527 silly registry.get     via: '1.1 varnish',
+527 silly registry.get     'cache-control': 'max-age=60',
+527 silly registry.get     etag: '"1KF4T3AZR1LEVLO6E686X01AK"',
+527 silly registry.get     age: '37',
+527 silly registry.get     connection: 'keep-alive',
+527 silly registry.get     'x-served-by': 'cache-sin6920-SIN',
+527 silly registry.get     'x-cache': 'HIT',
+527 silly registry.get     'x-cache-hits': '1',
+527 silly registry.get     'x-timer': 'S1436816458.936980,VS0,VE0',
+527 silly registry.get     vary: 'Accept' } ]
+528 verbose etag https://registry.npmjs.org/lodash.isfinite from cache
+529 silly addNameRange number 2 { name: 'lodash.isfinite',
+529 silly addNameRange   range: '>=2.4.1-0 <2.5.0-0',
+529 silly addNameRange   hasData: true }
+530 silly addNameRange versions [ 'lodash.isfinite',
+530 silly addNameRange   [ '2.0.0',
+530 silly addNameRange     '2.1.0',
+530 silly addNameRange     '2.2.0',
+530 silly addNameRange     '2.2.1',
+530 silly addNameRange     '2.3.0',
+530 silly addNameRange     '2.4.0',
+530 silly addNameRange     '2.4.1',
+530 silly addNameRange     '3.0.0',
+530 silly addNameRange     '3.1.0',
+530 silly addNameRange     '3.2.0' ] ]
+531 verbose addNamed [ 'lodash.isfinite', '2.4.1' ]
+532 verbose addNamed [ '2.4.1', '2.4.1' ]
+533 silly lockFile 0abd66bf-lodash-isfinite-2-4-1 lodash.isfinite@2.4.1
+534 verbose lock lodash.isfinite@2.4.1 /home/soumik/.npm/0abd66bf-lodash-isfinite-2-4-1.lock
+535 silly lockFile 0abd66bf-lodash-isfinite-2-4-1 lodash.isfinite@2.4.1
+536 silly lockFile 0abd66bf-lodash-isfinite-2-4-1 lodash.isfinite@2.4.1
+537 silly lockFile 1bdb79fe-lodash-isfinite-2-4-1 lodash.isfinite@~2.4.1
+538 silly lockFile 1bdb79fe-lodash-isfinite-2-4-1 lodash.isfinite@~2.4.1
+539 http 304 https://registry.npmjs.org/mkdirp
+540 silly registry.get cb [ 304,
+540 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+540 silly registry.get     via: '1.1 varnish',
+540 silly registry.get     'cache-control': 'max-age=60',
+540 silly registry.get     etag: '"WC1HKTT7K86HMIXTVILULGD4"',
+540 silly registry.get     age: '42',
+540 silly registry.get     connection: 'keep-alive',
+540 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+540 silly registry.get     'x-cache': 'HIT',
+540 silly registry.get     'x-cache-hits': '4',
+540 silly registry.get     'x-timer': 'S1436816458.951918,VS0,VE0',
+540 silly registry.get     vary: 'Accept' } ]
+541 verbose etag https://registry.npmjs.org/mkdirp from cache
+542 silly addNameRange number 2 { name: 'mkdirp', range: '>=0.3.5-0 <0.4.0-0', hasData: true }
+543 silly addNameRange versions [ 'mkdirp',
+543 silly addNameRange   [ '0.0.1',
+543 silly addNameRange     '0.0.2',
+543 silly addNameRange     '0.0.3',
+543 silly addNameRange     '0.0.4',
+543 silly addNameRange     '0.0.5',
+543 silly addNameRange     '0.0.6',
+543 silly addNameRange     '0.0.7',
+543 silly addNameRange     '0.1.0',
+543 silly addNameRange     '0.2.0',
+543 silly addNameRange     '0.2.1',
+543 silly addNameRange     '0.2.2',
+543 silly addNameRange     '0.3.0',
+543 silly addNameRange     '0.3.1',
+543 silly addNameRange     '0.3.2',
+543 silly addNameRange     '0.3.3',
+543 silly addNameRange     '0.3.4',
+543 silly addNameRange     '0.3.5',
+543 silly addNameRange     '0.4.0',
+543 silly addNameRange     '0.4.1',
+543 silly addNameRange     '0.4.2',
+543 silly addNameRange     '0.5.0',
+543 silly addNameRange     '0.5.1' ] ]
+544 verbose addNamed [ 'mkdirp', '0.3.5' ]
+545 verbose addNamed [ '0.3.5', '0.3.5' ]
+546 silly lockFile 67d2df2a-mkdirp-0-3-5 mkdirp@0.3.5
+547 verbose lock mkdirp@0.3.5 /home/soumik/.npm/67d2df2a-mkdirp-0-3-5.lock
+548 silly lockFile 7b2ebe55-pmjs-org-mkdirp-mkdirp-0-3-5-tgz https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+549 verbose lock https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz /home/soumik/.npm/7b2ebe55-pmjs-org-mkdirp-mkdirp-0-3-5-tgz.lock
+550 verbose addRemoteTarball [ 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz',
+550 verbose addRemoteTarball   'de3e5f8961c88c787ee1368df849ac4413eca8d7' ]
+551 info retry fetch attempt 1 at 01:10:58
+552 verbose fetch to= /tmp/npm-3083-QNLbfhVT/registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+553 http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+554 http 304 https://registry.npmjs.org/readable-stream
+555 silly registry.get cb [ 304,
+555 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+555 silly registry.get     via: '1.1 varnish',
+555 silly registry.get     'cache-control': 'max-age=60',
+555 silly registry.get     etag: '"BN7ANL53C49ZOR8ROUQ3U8OK8"',
+555 silly registry.get     age: '14',
+555 silly registry.get     connection: 'keep-alive',
+555 silly registry.get     'x-served-by': 'cache-sin6922-SIN',
+555 silly registry.get     'x-cache': 'HIT',
+555 silly registry.get     'x-cache-hits': '2',
+555 silly registry.get     'x-timer': 'S1436816458.960562,VS0,VE0',
+555 silly registry.get     vary: 'Accept' } ]
+556 verbose etag https://registry.npmjs.org/readable-stream from cache
+557 silly addNameRange number 2 { name: 'readable-stream',
+557 silly addNameRange   range: '>=1.0.27-1 <2.0.0-0',
+557 silly addNameRange   hasData: true }
+558 silly addNameRange versions [ 'readable-stream',
+558 silly addNameRange   [ '0.0.1',
+558 silly addNameRange     '0.0.2',
+558 silly addNameRange     '0.0.3',
+558 silly addNameRange     '0.0.4',
+558 silly addNameRange     '0.1.0',
+558 silly addNameRange     '0.2.0',
+558 silly addNameRange     '0.3.0',
+558 silly addNameRange     '0.3.1',
+558 silly addNameRange     '1.0.0',
+558 silly addNameRange     '1.0.1',
+558 silly addNameRange     '1.0.2',
+558 silly addNameRange     '1.0.15',
+558 silly addNameRange     '1.0.17',
+558 silly addNameRange     '1.1.7',
+558 silly addNameRange     '1.1.8',
+558 silly addNameRange     '1.1.9',
+558 silly addNameRange     '1.0.24',
+558 silly addNameRange     '1.0.25',
+558 silly addNameRange     '1.1.10',
+558 silly addNameRange     '1.0.25-1',
+558 silly addNameRange     '1.1.11',
+558 silly addNameRange     '1.0.26',
+558 silly addNameRange     '1.0.26-1',
+558 silly addNameRange     '1.1.11-1',
+558 silly addNameRange     '1.0.26-2',
+558 silly addNameRange     '1.1.12',
+558 silly addNameRange     '1.0.26-3',
+558 silly addNameRange     '1.0.26-4',
+558 silly addNameRange     '1.1.12-1',
+558 silly addNameRange     '1.0.27-1',
+558 silly addNameRange     '1.1.13-1',
+558 silly addNameRange     '1.0.31',
+558 silly addNameRange     '1.1.13',
+558 silly addNameRange     '1.0.32',
+558 silly addNameRange     '1.0.32-1',
+558 silly addNameRange     '1.0.33-1',
+558 silly addNameRange     '1.0.33-2',
+558 silly addNameRange     '1.0.33',
+558 silly addNameRange     '2.0.0',
+558 silly addNameRange     '2.0.1' ] ]
+559 verbose addNamed [ 'readable-stream', '1.1.13' ]
+560 verbose addNamed [ '1.1.13', '1.1.13' ]
+561 silly lockFile c06c4d25-readable-stream-1-1-13 readable-stream@1.1.13
+562 verbose lock readable-stream@1.1.13 /home/soumik/.npm/c06c4d25-readable-stream-1-1-13.lock
+563 http 304 https://registry.npmjs.org/sentry-logger
+564 silly registry.get cb [ 304,
+564 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+564 silly registry.get     via: '1.1 varnish',
+564 silly registry.get     'cache-control': 'max-age=60',
+564 silly registry.get     etag: '"D075SM8HXG85FC626KAXH3QFS"',
+564 silly registry.get     age: '38',
+564 silly registry.get     connection: 'keep-alive',
+564 silly registry.get     'x-served-by': 'cache-sin6924-SIN',
+564 silly registry.get     'x-cache': 'HIT',
+564 silly registry.get     'x-cache-hits': '1',
+564 silly registry.get     'x-timer': 'S1436816458.970593,VS0,VE0',
+564 silly registry.get     vary: 'Accept' } ]
+565 verbose etag https://registry.npmjs.org/sentry-logger from cache
+566 silly lockFile c06c4d25-readable-stream-1-1-13 readable-stream@1.1.13
+567 silly lockFile c06c4d25-readable-stream-1-1-13 readable-stream@1.1.13
+568 silly lockFile b2bef7d7-readable-stream-1-0-27-1 readable-stream@^1.0.27-1
+569 silly lockFile b2bef7d7-readable-stream-1-0-27-1 readable-stream@^1.0.27-1
+570 silly addNameRange number 2 { name: 'sentry-logger',
+570 silly addNameRange   range: '>=3.0.3-0 <4.0.0-0',
+570 silly addNameRange   hasData: true }
+571 silly addNameRange versions [ 'sentry-logger',
+571 silly addNameRange   [ '2.0.1', '2.1.0', '3.0.0', '3.0.1', '3.0.2', '3.0.3' ] ]
+572 verbose addNamed [ 'sentry-logger', '3.0.3' ]
+573 verbose addNamed [ '3.0.3', '3.0.3' ]
+574 silly lockFile a66f667a-sentry-logger-3-0-3 sentry-logger@3.0.3
+575 verbose lock sentry-logger@3.0.3 /home/soumik/.npm/a66f667a-sentry-logger-3-0-3.lock
+576 silly lockFile a66f667a-sentry-logger-3-0-3 sentry-logger@3.0.3
+577 silly lockFile a66f667a-sentry-logger-3-0-3 sentry-logger@3.0.3
+578 silly lockFile 6e7f63e5-sentry-logger-3-0-3 sentry-logger@^3.0.3
+579 silly lockFile 6e7f63e5-sentry-logger-3-0-3 sentry-logger@^3.0.3
+580 http 304 https://registry.npmjs.org/uber-raven
+581 silly registry.get cb [ 304,
+581 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:58 GMT',
+581 silly registry.get     via: '1.1 varnish',
+581 silly registry.get     'cache-control': 'max-age=60',
+581 silly registry.get     etag: '"4NBBAYIA7VFFEJPM9JUPIEGT4"',
+581 silly registry.get     age: '38',
+581 silly registry.get     connection: 'keep-alive',
+581 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+581 silly registry.get     'x-cache': 'HIT',
+581 silly registry.get     'x-cache-hits': '1',
+581 silly registry.get     'x-timer': 'S1436816458.990344,VS0,VE0',
+581 silly registry.get     vary: 'Accept' } ]
+582 verbose etag https://registry.npmjs.org/uber-raven from cache
+583 silly addNameRange number 2 { name: 'uber-raven',
+583 silly addNameRange   range: '>=0.6.3-project-name <0.7.0-0',
+583 silly addNameRange   hasData: true }
+584 silly addNameRange versions [ 'uber-raven',
+584 silly addNameRange   [ '0.7.2', '0.7.2-project-name', '0.6.3-project-name' ] ]
+585 verbose addNamed [ 'uber-raven', '0.6.3-project-name' ]
+586 verbose addNamed [ '0.6.3-project-name', '0.6.3-project-name' ]
+587 silly lockFile 02f5b5fd-uber-raven-0-6-3-project-name uber-raven@0.6.3-project-name
+588 verbose lock uber-raven@0.6.3-project-name /home/soumik/.npm/02f5b5fd-uber-raven-0-6-3-project-name.lock
+589 silly lockFile 02f5b5fd-uber-raven-0-6-3-project-name uber-raven@0.6.3-project-name
+590 silly lockFile 02f5b5fd-uber-raven-0-6-3-project-name uber-raven@0.6.3-project-name
+591 silly lockFile b618e737-uber-raven-0-6-3-project-name uber-raven@^0.6.3-project-name
+592 silly lockFile b618e737-uber-raven-0-6-3-project-name uber-raven@^0.6.3-project-name
+593 http 304 https://registry.npmjs.org/nodemailer
+594 silly registry.get cb [ 304,
+594 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:59 GMT',
+594 silly registry.get     via: '1.1 varnish',
+594 silly registry.get     'cache-control': 'max-age=60',
+594 silly registry.get     etag: '"5IP4A8V8ZP6M3MZ7OGG5F2C3K"',
+594 silly registry.get     age: '38',
+594 silly registry.get     connection: 'keep-alive',
+594 silly registry.get     'x-served-by': 'cache-sin6920-SIN',
+594 silly registry.get     'x-cache': 'HIT',
+594 silly registry.get     'x-cache-hits': '1',
+594 silly registry.get     'x-timer': 'S1436816459.000568,VS0,VE0',
+594 silly registry.get     vary: 'Accept' } ]
+595 verbose etag https://registry.npmjs.org/nodemailer from cache
+596 silly addNameRange number 2 { name: 'nodemailer',
+596 silly addNameRange   range: '>=0.5.14-0 <0.6.0-0',
+596 silly addNameRange   hasData: true }
+597 silly addNameRange versions [ 'nodemailer',
+597 silly addNameRange   [ '0.1.1',
+597 silly addNameRange     '0.1.2',
+597 silly addNameRange     '0.1.3',
+597 silly addNameRange     '0.1.4',
+597 silly addNameRange     '0.1.5',
+597 silly addNameRange     '0.1.6',
+597 silly addNameRange     '0.1.7',
+597 silly addNameRange     '0.1.8',
+597 silly addNameRange     '0.1.9',
+597 silly addNameRange     '0.1.10',
+597 silly addNameRange     '0.1.11',
+597 silly addNameRange     '0.1.12',
+597 silly addNameRange     '0.1.13',
+597 silly addNameRange     '0.1.14',
+597 silly addNameRange     '0.1.15',
+597 silly addNameRange     '0.1.16',
+597 silly addNameRange     '0.1.17',
+597 silly addNameRange     '0.1.18',
+597 silly addNameRange     '0.1.19',
+597 silly addNameRange     '0.1.20',
+597 silly addNameRange     '0.1.21',
+597 silly addNameRange     '0.1.22',
+597 silly addNameRange     '0.1.23',
+597 silly addNameRange     '0.1.24',
+597 silly addNameRange     '0.2.0',
+597 silly addNameRange     '0.2.1',
+597 silly addNameRange     '0.2.2',
+597 silly addNameRange     '0.2.3',
+597 silly addNameRange     '0.2.4',
+597 silly addNameRange     '0.3.0',
+597 silly addNameRange     '0.3.1',
+597 silly addNameRange     '0.3.2',
+597 silly addNameRange     '0.3.3',
+597 silly addNameRange     '0.3.4',
+597 silly addNameRange     '0.3.5',
+597 silly addNameRange     '0.3.6',
+597 silly addNameRange     '0.3.7',
+597 silly addNameRange     '0.3.8',
+597 silly addNameRange     '0.3.9',
+597 silly addNameRange     '0.3.10',
+597 silly addNameRange     '0.3.11',
+597 silly addNameRange     '0.3.12',
+597 silly addNameRange     '0.3.13',
+597 silly addNameRange     '0.3.14',
+597 silly addNameRange     '0.3.15',
+597 silly addNameRange     '0.3.16',
+597 silly addNameRange     '0.3.17',
+597 silly addNameRange     '0.3.18',
+597 silly addNameRange     '0.3.19',
+597 silly addNameRange     '0.3.20',
+597 silly addNameRange     '0.3.21',
+597 silly addNameRange     '0.3.22',
+597 silly addNameRange     '0.3.23',
+597 silly addNameRange     '0.3.24',
+597 silly addNameRange     '0.3.25',
+597 silly addNameRange     '0.3.26',
+597 silly addNameRange     '0.3.27',
+597 silly addNameRange     '0.3.28',
+597 silly addNameRange     '0.3.29',
+597 silly addNameRange     '0.3.30',
+597 silly addNameRange     '0.3.31',
+597 silly addNameRange     '0.3.32',
+597 silly addNameRange     '0.3.33',
+597 silly addNameRange     '0.3.34',
+597 silly addNameRange     '0.3.35',
+597 silly addNameRange     '0.3.37',
+597 silly addNameRange     '0.3.38',
+597 silly addNameRange     '0.3.39',
+597 silly addNameRange     '0.3.40',
+597 silly addNameRange     '0.3.41',
+597 silly addNameRange     '0.3.42',
+597 silly addNameRange     '0.3.43',
+597 silly addNameRange     '0.3.44',
+597 silly addNameRange     '0.4.0',
+597 silly addNameRange     '0.4.1',
+597 silly addNameRange     '0.4.2',
+597 silly addNameRange     '0.4.3',
+597 silly addNameRange     '0.4.4',
+597 silly addNameRange     '0.5.0',
+597 silly addNameRange     '0.5.1',
+597 silly addNameRange     '0.5.2',
+597 silly addNameRange     '0.5.3',
+597 silly addNameRange     '0.5.4',
+597 silly addNameRange     '0.5.5',
+597 silly addNameRange     '0.5.6',
+597 silly addNameRange     '0.5.7',
+597 silly addNameRange     '0.5.8',
+597 silly addNameRange     '0.5.9',
+597 silly addNameRange     '0.5.10',
+597 silly addNameRange     '0.5.11',
+597 silly addNameRange     '0.5.12',
+597 silly addNameRange     '0.5.13',
+597 silly addNameRange     '0.5.14',
+597 silly addNameRange     '0.5.15',
+597 silly addNameRange     '0.6.0',
+597 silly addNameRange     '0.6.1',
+597 silly addNameRange     '0.6.2',
+597 silly addNameRange     '0.6.3',
+597 silly addNameRange     '0.6.4',
+597 silly addNameRange     '0.6.5',
+597 silly addNameRange     '0.7.0',
+597 silly addNameRange     '0.7.1',
+597 silly addNameRange     '1.0.0-rc.1',
+597 silly addNameRange     '1.0.0',
+597 silly addNameRange     '1.0.1',
+597 silly addNameRange     '1.0.2',
+597 silly addNameRange     '1.0.3',
+597 silly addNameRange     '1.0.4',
+597 silly addNameRange     '1.1.0',
+597 silly addNameRange     '1.1.1',
+597 silly addNameRange     '1.1.2',
+597 silly addNameRange     '1.2.0',
+597 silly addNameRange     '1.2.1',
+597 silly addNameRange     '1.2.2',
+597 silly addNameRange     '1.3.0',
+597 silly addNameRange     '1.3.1',
+597 silly addNameRange     '1.3.2',
+597 silly addNameRange     '1.3.3',
+597 silly addNameRange     '1.3.4',
+597 silly addNameRange     '1.4.0' ] ]
+598 verbose addNamed [ 'nodemailer', '0.5.15' ]
+599 verbose addNamed [ '0.5.15', '0.5.15' ]
+600 silly lockFile 9a194bf5-nodemailer-0-5-15 nodemailer@0.5.15
+601 verbose lock nodemailer@0.5.15 /home/soumik/.npm/9a194bf5-nodemailer-0-5-15.lock
+602 http 304 https://registry.npmjs.org/xtend
+603 silly registry.get cb [ 304,
+603 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:59 GMT',
+603 silly registry.get     via: '1.1 varnish',
+603 silly registry.get     'cache-control': 'max-age=60',
+603 silly registry.get     etag: '"DRVFMF23K6DJ81KYA798DL7SF"',
+603 silly registry.get     age: '49',
+603 silly registry.get     connection: 'keep-alive',
+603 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+603 silly registry.get     'x-cache': 'HIT',
+603 silly registry.get     'x-cache-hits': '18',
+603 silly registry.get     'x-timer': 'S1436816459.014526,VS0,VE0',
+603 silly registry.get     vary: 'Accept' } ]
+604 verbose etag https://registry.npmjs.org/xtend from cache
+605 silly lockFile 9a194bf5-nodemailer-0-5-15 nodemailer@0.5.15
+606 silly lockFile 9a194bf5-nodemailer-0-5-15 nodemailer@0.5.15
+607 silly lockFile 2088a896-nodemailer-0-5-14 nodemailer@~0.5.14
+608 silly lockFile 2088a896-nodemailer-0-5-14 nodemailer@~0.5.14
+609 silly addNameRange number 2 { name: 'xtend', range: '>=4.0.0-0 <5.0.0-0', hasData: true }
+610 silly addNameRange versions [ 'xtend',
+610 silly addNameRange   [ '1.0.0',
+610 silly addNameRange     '1.0.1',
+610 silly addNameRange     '1.0.2',
+610 silly addNameRange     '1.0.3',
+610 silly addNameRange     '2.0.1',
+610 silly addNameRange     '2.0.2',
+610 silly addNameRange     '2.0.3',
+610 silly addNameRange     '2.0.4',
+610 silly addNameRange     '2.0.5',
+610 silly addNameRange     '2.0.6',
+610 silly addNameRange     '2.1.1',
+610 silly addNameRange     '2.1.2',
+610 silly addNameRange     '2.2.0',
+610 silly addNameRange     '3.0.0',
+610 silly addNameRange     '4.0.0' ] ]
+611 verbose addNamed [ 'xtend', '4.0.0' ]
+612 verbose addNamed [ '4.0.0', '4.0.0' ]
+613 silly lockFile cf5db8a8-xtend-4-0-0 xtend@4.0.0
+614 verbose lock xtend@4.0.0 /home/soumik/.npm/cf5db8a8-xtend-4-0-0.lock
+615 silly lockFile cf5db8a8-xtend-4-0-0 xtend@4.0.0
+616 silly lockFile cf5db8a8-xtend-4-0-0 xtend@4.0.0
+617 silly lockFile 409d9c3a-xtend-4-0-0 xtend@^4.0.0
+618 silly lockFile 409d9c3a-xtend-4-0-0 xtend@^4.0.0
+619 http 304 https://registry.npmjs.org/winston-uber
+620 silly registry.get cb [ 304,
+620 silly registry.get   { date: 'Mon, 13 Jul 2015 19:40:59 GMT',
+620 silly registry.get     via: '1.1 varnish',
+620 silly registry.get     'cache-control': 'max-age=60',
+620 silly registry.get     etag: '"3BBMRD0MM7IA4FATJCE5SH2ZM"',
+620 silly registry.get     age: '38',
+620 silly registry.get     connection: 'keep-alive',
+620 silly registry.get     'x-served-by': 'cache-sin6922-SIN',
+620 silly registry.get     'x-cache': 'HIT',
+620 silly registry.get     'x-cache-hits': '1',
+620 silly registry.get     'x-timer': 'S1436816459.028024,VS0,VE0',
+620 silly registry.get     vary: 'Accept' } ]
+621 verbose etag https://registry.npmjs.org/winston-uber from cache
+622 silly addNameRange number 2 { name: 'winston-uber',
+622 silly addNameRange   range: '>=1.0.0-0 <2.0.0-0',
+622 silly addNameRange   hasData: true }
+623 silly addNameRange versions [ 'winston-uber', [ '1.0.0' ] ]
+624 verbose addNamed [ 'winston-uber', '1.0.0' ]
+625 verbose addNamed [ '1.0.0', '1.0.0' ]
+626 silly lockFile 376f8e20-winston-uber-1-0-0 winston-uber@1.0.0
+627 verbose lock winston-uber@1.0.0 /home/soumik/.npm/376f8e20-winston-uber-1-0-0.lock
+628 silly lockFile 376f8e20-winston-uber-1-0-0 winston-uber@1.0.0
+629 silly lockFile 376f8e20-winston-uber-1-0-0 winston-uber@1.0.0
+630 silly lockFile 93f5dd58-winston-uber-1-0-0 winston-uber@^1.0.0
+631 silly lockFile 93f5dd58-winston-uber-1-0-0 winston-uber@^1.0.0
+632 http 200 https://registry.npmjs.org/deep-extend/-/deep-extend-0.4.0.tgz
+633 silly lockFile 92b3d058-eep-extend-deep-extend-0-4-0-tgz https://registry.npmjs.org/deep-extend/-/deep-extend-0.4.0.tgz
+634 silly lockFile 92b3d058-eep-extend-deep-extend-0-4-0-tgz https://registry.npmjs.org/deep-extend/-/deep-extend-0.4.0.tgz
+635 silly lockFile 9d4431c2-deep-extend-0-4-0 deep-extend@0.4.0
+636 silly lockFile 9d4431c2-deep-extend-0-4-0 deep-extend@0.4.0
+637 verbose about to build /home/soumik/Projects/nodejs/cloud_tripper1/node_modules/logtron
+638 verbose node_modules/logtron unbuild
+639 info preuninstall logtron@8.5.0
+640 info uninstall logtron@8.5.0
+641 verbose true,/home/soumik/Projects/nodejs/cloud_tripper1/node_modules,/home/soumik/Projects/nodejs/cloud_tripper1/node_modules unbuild logtron@8.5.0
+642 info postuninstall logtron@8.5.0
+643 error Error: EACCES, mkdir '/home/soumik/.npm/deep-extend/0.4.0'
+643 error  { [Error: EACCES, mkdir '/home/soumik/.npm/deep-extend/0.4.0']
+643 error   errno: 3,
+643 error   code: 'EACCES',
+643 error   path: '/home/soumik/.npm/deep-extend/0.4.0',
+643 error   parent: 'logtron' }
+644 error Please try running this command again as root/Administrator.
+645 error System Linux 3.19.0-21-generic
+646 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "logtron" "--save"
+647 error cwd /home/soumik/Projects/nodejs/cloud_tripper1/views
+648 error node -v v0.10.25
+649 error npm -v 1.4.21
+650 error path /home/soumik/.npm/deep-extend/0.4.0
+651 error code EACCES
+652 error errno 3
+653 error stack Error: EACCES, mkdir '/home/soumik/.npm/deep-extend/0.4.0'
+654 verbose exit [ 3, true ]

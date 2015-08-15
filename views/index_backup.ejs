@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/semantic.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/homepage.css">
+    <!--    bootstap datepicker css-->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap-datepicker3.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap-datepicker3.min.css">
+    <!-- jQUERY -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+    <!--        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/theme/jquery-ui.css">-->
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="/javascripts/semantic.js"></script>
+    <script src="/javascripts/homepage.js"></script>
+    <!-- GMAPS -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="https://raw.githubusercontent.com/HPNeo/gmaps/master/gmaps.js"></script>
+    <!-- jQuery Cookie -->
+    <script type="text/javascript" src="/javascripts/cookie.js"></script>
+
+    <!--    google maps-->
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <!--    bootstrap datepicker-->
+    <script src="/javascripts/bootstrap-datepicker.js"></script>
+    <script src="/javascripts/bootstrap-datepicker.min.js"></script>
+    <!--    highcharts-->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <!--    slimscroll-->
+    <script type="text/javascript" src="/javascripts/jquery.slimscroll.min.js"></script>
+
+</head>
+<style>
+    #search {
+        background-image: url("/images/bg_pics.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
+
+<body>
+
+
+    <div>
+        <div class="ui form " style="width:25%;heigth:75%;margin-left: auto;margin-right:auto;">
+            <% if(messageContent!=null){%>
+                <div class="ui visible message green floating" id="message" style="">
+
+                    <p style="margin-left: auto;margin-right: auto;width: 40%;">
+                        <%= messageContent %>
+                    </p>
+
+                </div>
+                <% } %>
+
+        </div>
+        <div class="ui form " style="width:65%;heigth:75%;margin-left: auto;margin-right:auto;">
+
+            <div class="ui grid">
+                <div class="row">
+                    <div class="ten wide column">
+                        <p style="font-size:160%;padding-top:10px;">ClowdTripping.com</p>
+                        <br> Harness the power of crowd and get amazing deals..
+                    </div>
+                    <div class="two wide column">
+                    </div>
+                    <div class="four wide column">
+                        <br>
+                        <br>
+                        <!-- <i class="large sign in icon"></i>
+                    <i class="large help icon"></i>
+                    <i class="large settings icon"></i>-->
+                        <div class="ui menu" style="margin:0px; padding:0px;">
+                            <a class="item">
+                                <i class="large sign in icon" id="signin"></i>
+                            </a>
+                            <a class="item">
+                                <i class="large help icon"></i>
+                            </a>
+                            <a class="item">
+                                <i class="large settings icon"></i>
+                            </a>
+                            <a></a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="ui form segment" style="width:65%;heigth:75%;margin-left: auto;margin-right:auto;">
+
+        <div class="ui  attached tabular menu">
+            <a class="active item" data-tab="search">Search</a>
+            <a class="item" data-tab="places" onclick="alert();" >Places</a>
+            <a class="item" data-tab="calender">Calender</a>
+            <a class="item" data-tab="interest">Interest</a>
+        </div>
+        <div class="ui bottom attached active tab segment" data-tab="search" style="heigth:100%;margin-left: auto;margin-right:auto;" id="search">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <span style="font-size:200%;position: relative;left:5;">I want to go to <a id="destination">Destination</a> <input id="destination_input" type="text" name="" style="height:10%;width:21%;font-size:60%;background:transparent;">in <i class="calendar icon"></i> for <a id='days'>10</a><input id="days_input" type="text" name="" style="height:10%;width:7%;font-size:50%;background:transparent;"> days with <a id="people">5</a> <input id="people_input" type="text" name="" style="height:10%;width:7%;font-size:50%;background:transparent;">people </span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="places" >
+            <div id="googleMap" style="width:790px;height:530px;"></div>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="calender">
+            <!--            calender section-->
+            <div id="calender" style="width:790px;height:530px;">
+                <div id="container" style="min-width: 770px; height: 400px; margin: 0 auto"></div>
+                <a class="year" href="#">2005</a>
+                <a class="year" href="#">2006</a>
+                <a class="year" href="#">2007</a>
+                <a class="year" href="#">2008</a>
+                <a class="year" href="#">2009</a>
+                <a class="year" href="#">2010</a>
+
+            </div>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="interest">
+            <div id="interest" style="width:780px;height:530px;">
+                <!--
+                <div class="ui grid">
+                    <div class="row">
+                        <div class="one wide column">
+                        </div>
+                        <div class="five wide column" style="heigth:50%;width:33.33%">
+                            <img src="/images/nature.jpeg" height="240" width="263">
+
+                        </div>
+                        <div class="five wide column">
+                            <img src="/images/adventure.jpeg" height="240" width="263">
+                        </div>
+                        <div class="five wide column">
+                            <img src="/images/honeymoon.jpeg" height="240" width="263">
+                        </div>
+                        <div class="one wide column">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="one wide column">
+                        </div>
+                        <div class="five wide column">
+                            <img src="/images/luxury.jpg" height="240" width="263">
+                        </div>
+                        <div class="five wide column">
+                            <img src="/images/family.jpeg" height="240" width="263">
+                        </div>
+                        <div class="five wide column">
+                            <img src="/images/lowcost.jpg" height="240" width="263">
+                        </div>
+                        <div class="one wide column">
+                        </div>
+                    </div>
+
+                </div>
+-->
+                <div class="ui items">
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/nature.jpeg">
+                        </div>
+                        <div class="content">
+                            <a class="header">Nature</a>
+                            <div class="meta">
+                                <span>Description</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                            <div class="extra">
+                                Additional Details
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/adventure.jpeg">
+                        </div>
+                        <div class="content">
+                            <a class="header">Adventure</a>
+                            <div class="meta">
+                                <span>Description</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                            <div class="extra">
+                                Additional Details
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/honeymoon.jpeg">
+                        </div>
+                        <div class="content">
+                            <a class="header">Honeymoon</a>
+                            <div class="meta">
+                                <span>Description</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                            <div class="extra">
+                                Additional Details
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/luxury.jpg">
+                        </div>
+                        <div class="content">
+                            <a class="header">Luxury</a>
+                            <div class="meta">
+                                <span>Description</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                            <div class="extra">
+                                Additional Details
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/family.jpeg">
+                        </div>
+                        <div class="content">
+                            <a class="header">Family</a>
+                            <div class="meta">
+                                <span>Description</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                            <div class="extra">
+                                Additional Details
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/lowcost.jpg">
+                        </div>
+                        <div class="content">
+                            <a class="header">Budget</a>
+                            <div class="meta">
+                                <span>Description</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                             </div>
+                            <div class="extra">
+                                Additional Details
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <div class="ui form " style="width:65%;heigth:75%;margin-left: auto;margin-right:auto;">
+        <div class="ui grid">
+            <div class="row">
+                <div class="six wide column">
+                    Create your deals where no deals existed..
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="two wide column">
+                    <a href="#">About Us</a>
+                    <br> <a href="#">Terms of Use</a>
+                    <br> <a href="#">Privacy</a>
+                    <br> <a href="#">Careers</a>
+                    <br> <a href="#">Press</a>
+                    <br> <a href="#">Blog</a>
+                    <br>
+                </div>
+                <div class="three wide column">
+                    <a href="#">Top Budget</a>
+                    <br> <a href="#">Top Interests</a>
+                    <br> <a href="#">Top Honeymoon</a>
+                    <br> <a href="#">Top Adventure</a>
+                    <br> <a href="#">Top Family</a>
+                    <br> <a href="#">Top Nature</a>
+                    <br>
+                </div>
+                <div class="five wide column">
+                    <h4>Join Us On</h4>
+                    <br>
+                    <br>
+                    <a href="http://www.facebook.com" style="text-decoration:none;color:inherit"><i class="large facebook icon"></i></a>
+                    <a href="http://www.twitter.com" style="text-decoration:none;color:inherit"><i class="large twitter icon"></i></a>
+                    <a href="http://www.instagram.com" style="text-decoration:none;color:inherit"><i class="large instagram icon"></i></a>
+                    <a href="http://www.pinterest.com" style="text-decoration:none;color:inherit"><i class="large pinterest icon"></i></a>
+                    <a href="http://www.linkedin.com" style="text-decoration:none;color:inherit"><i class="large linkedin icon"></i></a>
+                    <a href="http://www.google.com" style="text-decoration:none;color:inherit"><i class="large google plus icon"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <p style="padding-bottom:20px;">2015-2016 All Rights reserved @ Crowdtripping Pvt Ltd.</p>
+    </div>
+    <!--    Modal for login-->
+    <div class="ui basic modal">
+        <i class="close icon"></i>
+        <div class="header">
+            Login
+        </div>
+        <div class="content">
+            <div class="image">
+                <i class="sign in icon"></i>
+            </div>
+            <div class="description">
+                <form class="ui form" action="/login/user" method="post">
+
+                    <h4 class="ui dividing header">Account Info</h4>
+                    <div class="three fields">
+                        <div class="required fields"></div>
+                        <div class="required field">
+                            <label>Username</label>
+                            <div class="ui icon input">
+                                <input type="text" placeholder="Username" name="user_id">
+                                <i class="user icon"></i>
+                            </div>
+                        </div>
+                        <div class="three fields" <div></div>
+                        <div class="required field">
+                            <label>Password</label>
+                            <div class="ui icon input">
+                                <input type="password" name="password">
+                                <i class="lock icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="/signup">Do not have an account? open New </a>
+                    </div>
+                    <br>
+                    <div class="row">
+
+                        <div class="ui submit button">login</div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <!--
+      <div class="actions">
+        <div class="two fluid ui inverted buttons">
+          <div class="ui red basic inverted button">
+            <i class="remove icon"></i>
+            No
+          </div>
+          <div class="ui green basic inverted button">
+            <i class="checkmark icon"></i>
+            Yes
+          </div>
+        </div>
+      </div>
+-->
+    </div>
+    <!--    Modal Ends-->
+
+</body>
+
+</html>
+
+<script language="javascript">
+    $(document).ready(function() {
+        $('#destination_input').hide();
+        $('#days_input').hide();
+        $('#people_input').hide();
+        google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.trigger(googleMap, "resize");
+
+        //        highcharts
+        var option = {
+            chart: {
+                type: 'column',
+                renderTo: 'container'
+            },
+            title: {
+                text: 'No of people taken over service'
+            },
+            xAxis: {
+                categories: [
+                    'Jan',
+                    'Feb',
+                    'Mar',
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec'
+                ],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Rainfall (mm)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Tokyo',
+                data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+
+            }]
+        };
+
+        //call the chart
+        chart = new Highcharts.Chart(option);
+
+
+        var message = '<%= message %>';
+        //             alert(message);
+        if (message == 'show') {
+            //         alert(message);
+            $("#message").hide(10000);
+        }
+
+        //        latitude and longitude variables        
+        if (getCookie('latitude') == '' || getCookie('longitude') == '') {
+            //getting geolocation
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+
+            //        set position 
+            function showPosition(position) {
+
+                setCookie('latitude', position.coords.latitude);
+                setCookie('longitude', position.coords.longitude);
+                alert(getCookie('latitude'));
+            }
+        }
+
+        //        activating menu tab
+//        $('.menu .item').tab();
+        $('.menu .item').tab({
+            onLoad:function(){
+                alert('alert');
+                return(tabPath, parameterArray, historyEvent);
+            },
+            error: {
+                      api        : 'You attempted to load content without API module',
+                      method     : 'The method you called is not defined',
+                      missingTab : 'Activated tab cannot be found for this context.',
+                      noContent  : 'The tab you specified is missing a content url.',
+                      path       : 'History enabled, but no path was specified',
+                      recursion  : 'Max recursive depth reached',
+                      state      : 'The state library has not been initialized'
+                    }
+        });
+
+
+        //        $('.basic.test.modal').modal('show');
+
+        //        slimscroll
+        $('#interest').slimScroll({
+            color: '#00f',
+            size: '10px',
+            height: '530px',
+            alwaysVisible: true
+        });
+
+
+    });
+    
+     $('#places').on('click',function(){
+        alert('calling palces');
+//         google.maps.event.addDomListener(window, 'load', initialize);
+    });
+
+    var myCenter = new google.maps.LatLng(51.508742, -0.120850);
+
+    function initialize() {
+        var mapProp = {
+            center: myCenter,
+            zoom: 1,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+        var marker = new google.maps.Marker({
+            position: myCenter,
+            title: 'Click to zoom'
+        });
+
+        marker.setMap(map);
+
+        // Zoom to 9 when clicking on marker
+        google.maps.event.addListener(marker, 'click', function() {
+            map.setZoom(9);
+            map.setCenter(marker.getPosition());
+        });
+
+        google.maps.event.addListener(map, 'center_changed', function() {
+            // 3 seconds after the center of the map has changed, pan back to the marker
+            window.setTimeout(function() {
+                map.panTo(marker.getPosition());
+            }, 3000);
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    //Clickable textbox
+    $('#destination').on('click', function() {
+        $('#destination').hide();
+        $('#destination_input').show();
+    });
+
+    $('#destination_input').on('blur', function() {
+        var destination = $('#destination_input').val();
+        if (destination == '') {
+            $('#destination_input').hide();
+            $('#destination').show();
+        } else {
+            $('#destination').html('');
+            $('#destination').html(destination);
+            $('#destination').show();
+            $('#destination_input').hide();
+        }
+
+    });
+
+    $('#days').on('click', function() {
+        $('#days').hide();
+        $('#days_input').show();
+    });
+
+    $('#days_input').on('blur', function() {
+        var destination = $('#days_input').val();
+        if (destination == '') {
+            $('#days').show();
+            $('#days_input').hide();
+        } else {
+            $('#days').html('');
+            $('#days').html(destination);
+            $('#days').show();
+            $('#days_input').hide();
+        }
+
+
+    });
+
+    $('#people').on('click', function() {
+        $('#people').hide();
+        $('#people_input').show();
+    });
+
+    $('#people_input').on('blur', function() {
+        var destination = $('#people_input').val();
+        if (destination == '') {
+            $('#people').show();
+            $('#people_input').hide();
+        } else {
+            $('#people').html('');
+            $('#people').html(destination);
+            $('#people').show();
+            $('#people_input').hide();
+        }
+
+    });
+
+
+    //$.get() to get places 
+    $.getJSON("/getPlaces", function(data) {
+        //iteration within the data
+        $.each(data, function(i, data_array) {
+            var div_data = "<option value=" + data_array.place + ">" + data_array.place + "</option>";
+            //alert(div_data);
+            $(div_data).appendTo('#addPlaces');
+            //alert(data_array.place)
+        });
+    });
+
+    //signin modal
+    $('#signin').on('click', function() {
+        $('.basic.modal').modal('show');
+    });
+
+    //    loading data using ajax
+    $('.year').on('click', function() {
+        var year = $(this).text();
+        $.get("/ajax/getData?year=" + year, function(data) {
+            chart.series[0].setData(data, true);
+            chart.series[0].update({
+                name: year
+            }, false);
+            chart.redraw();
+        });
+        return false;
+    });
+    
+    
+   
+</script>

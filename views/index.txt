@@ -1,0 +1,9 @@
+<!--
+mongoimport --db cloud_tripper --collection yearwise_travel --stopOnError --dbpath /home/soumik/
+
+mongoexport --db cloud_tripper --collection yearwise_travel --dbpath /srv/MongoDB/
+
+
+mongoexport --host localhost  --db cloud_tripper  --collection yearwise_travel --out mdb1-examplenet.json
+
+mongoimport --host http://52.24.254.115/ --db cloud_tripper --collection yearwise_travel  --file mdb1-examplenet.json-->
