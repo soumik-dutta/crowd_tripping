@@ -47,12 +47,10 @@ app.use('/users', users);
 //require('./routes/places')(app);
 require('./routes/auth/user')(app);
 require('./routes/ajax/ajaxdata')(app);
-app.get('/user_interest',function(req,res){
-    res.render('user_interest');
-});
+
 //require('./routes/signup/tsp')(app);
 
-/// catch 404 and forwarding to error handler
+// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
